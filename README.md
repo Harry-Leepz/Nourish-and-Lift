@@ -61,3 +61,7 @@ view the order number.
 ---
 
 ## **Credits**
+
+[Home page - Hero Image](https://unsplash.com/photos/0Wra5YYVQJE)
+- Photo by Karsten Winegeart on Unsplash
+  
