@@ -83,19 +83,46 @@
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
           <li class="list-inline-item dropdown">
-            <span class="icon">
-              <i class="far fa-user"></i>
-            </span>
+            <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="flase">
+              <div class="text-center">
+                <div><i class="fas fa-user fa-lg"></i></div>
+                <p class="my-0">Account</p>
+              </div>
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="user-options"> 
+              {% if request.user.is_authenticated %}
+                {% if request.user.is_superuser %}
+                  <a class="dropdown-item" href="">Product Management</a>
+                {% endif %}
+                <a class="dropdown-item" href="">My Profile</a>
+                <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
+                {% else %}
+                <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
+                <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
+              {% endif %}
+            </div>
           </li>
           <li class="list-inline-item">
-            <span class="icon">
-              <i class="far fa-heart"></i>
-            </span>
+            <a class="nav-link" href="">
+              <div class="text-center">
+                <div><i class="fas fa-heart fa-lg"></i></div>
+                <p class="my-0">Wishlist</p>
+              </div>
+            </a>
           </li>
           <li class="list-inline-item">
-            <span class="icon">
-              <i class="fas fa-shopping-bag"></i>
-            </span>
+            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+              <div class="text-center">
+                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                <p class="my-0">
+                  {% if grand_total %}
+                    £{{ grand_total|floatformat:2 }}
+                  {% else %}
+                    £0.00
+                  {% endif %}
+                </p>
+              </div>
+            </a>
           </li>
         </ul>
       </div>
