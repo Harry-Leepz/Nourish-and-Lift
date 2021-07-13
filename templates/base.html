@@ -5,58 +5,116 @@
 
 <head>
 
-	{% block meta %}
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	{% endblock %}
+  {% block meta %}
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {% endblock %}
 
-	{% block extra_meta %}
-	{% endblock %}
+  {% block extra_meta %}
+  {% endblock %}
 
-	{% block corecss %}
-		<!-- Bootstrap CSS-->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-			integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-	{% endblock %}
+  {% block corecss %}
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  {% endblock %}
 
-	{% block extra_css %}
-	{% endblock %}
+  {% block extra_css %}
+  {% endblock %}
 
-	{% block corejs %}
-		<!-- Bootstrap Scripts-->
-		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-		</script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-			integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-		</script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
-			integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
-		</script>
-	{% endblock %}
+  {% block corejs %}
+    <!-- Bootstrap Scripts-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+      integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
+    </script>
+  {% endblock %}
 
-	{% block extra_js %}
-	{% endblock %}
+  {% block extra_js %}
+  {% endblock %}
 
-	<title>Nourish and Lift {% block extra_title%}{% endblock %}</title>
+  <title>Nourish and Lift {% block extra_title%}{% endblock %}</title>
 </head>
 
 <body>
-	<header class="container-fluid fixed-top"></header>
+  <!-- Main Header Starts (Style and design taken from Bootstrap and CI Boutique Ado Project) -->
+  <header class="container-fluid fixed-top">
+    <div class="row">
+      <!-- Left side navbar with about and shop links -->
+      <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="{% url 'home' %}">N & L</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Shop</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- Center navbar with search bar -->
+      <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+        <form method="GET" action="">
+          <div class="input-group w-100">
+            <input class="form-control border border-black" type="text" name="q" placeholder="Search products via name or descripion">
+            <div class="input-group-append">
+              <button class="form-control btn btn-black border border-black" type="submit">
+                Search
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- Right side navbar with account, wishlist and checkout links  -->
+      <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+        <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+          <li class="list-inline-item dropdown">
+            <span class="icon">
+              <i class="far fa-user"></i>
+            </span>
+          </li>
+          <li class="list-inline-item">
+            <span class="icon">
+              <i class="far fa-heart"></i>
+            </span>
+          </li>
+          <li class="list-inline-item">
+            <span class="icon">
+              <i class="fas fa-shopping-bag"></i>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- Main Header Ends -->
 
-	{% if messages %}
-		<div class="message-container"></div>
-	{% endif %}
+  {% if messages %}
+    <div class="message-container"></div>
+  {% endif %}
 
-	{% block page_header %}
-	{% endblock %}
+  {% block page_header %}
+  {% endblock %}
 
-	{% block content %}
-	{% endblock %}
+  {% block content %}
+  {% endblock %}
 
-	{% block postloadjs %}
-	{% endblock %}
+  {% block postloadjs %}
+  {% endblock %}
 
 </body>
 
