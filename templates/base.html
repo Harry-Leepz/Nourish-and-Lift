@@ -18,12 +18,17 @@
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto&display=swap" >
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
   {% endblock %}
 
   {% block extra_css %}
   {% endblock %}
 
   {% block corejs %}
+    <script src="https://kit.fontawesome.com/3e878badfa.js" crossorigin="anonymous"></script>
     <!-- Bootstrap Scripts-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -51,17 +56,17 @@
         <ul class="list-inline list-unstyled text-center text-lg-left my-0">
           <li class="list-inline-item">
             <a class="nav-link main-logo-link" href="{% url 'home' %}">
-              <h4 class="logo-font text-black my-0"><strong>N</strong> & <strong>L</strong></h4>
+              <h2 class="logo-font text-black my-0"><strong>N</strong> & <strong>L</strong></h2>
             </a>
           </li>
           <li class="list-inline-item">
             <a class="nav-link main-logo-link" href="#">
-              <h4 class="text-black my-0">About</h4>
+              <h4 class="heavy-font text-black my-0">About</h4>
             </a>
           </li>
           <li class="list-inline-item">
             <a class="nav-link main-logo-link" href="#">
-              <h4 class="text-black my-0">Shop</h4>
+              <h4 class="heavy-font text-black my-0">Shop</h4>
             </a>
           </li> 
         </ul>
@@ -83,7 +88,7 @@
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
           <li class="list-inline-item dropdown">
-            <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link text-black" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="text-center">
                 <div><i class="fas fa-user fa-lg"></i></div>
                 <p class="my-0">Account</p>
@@ -103,7 +108,7 @@
             </div>
           </li>
           <li class="list-inline-item">
-            <a class="nav-link" href="">
+            <a class="nav-link text-black" href="">
               <div class="text-center">
                 <div><i class="fas fa-heart fa-lg"></i></div>
                 <p class="my-0">Wishlist</p>

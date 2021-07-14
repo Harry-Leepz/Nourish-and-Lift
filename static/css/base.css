@@ -11,11 +11,12 @@ html {
 }
 
 body {
-    background: url('/media/homepage-heroimage.jpg') no-repeat center center fixed;
-    background: fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/media/homepage-heroimage.jpg') no-repeat center center fixed;
+    background: cover;
     height: calc(100vh - 164px);
     color: black;
     font-family: 'Playfair Display', serif;
+    font-weight: 600;
 }
 
 /* from Bulma */
@@ -29,6 +30,13 @@ body {
 
 .logo-font {
     text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.heavy-font {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
 }
 
 .main-logo-link {
@@ -36,8 +44,8 @@ body {
 }
 
 .shop-now-button {
-    background: black;
-    color: white;
+    background: white;
+    color: black;
     min-width: 260px;
 }
 
