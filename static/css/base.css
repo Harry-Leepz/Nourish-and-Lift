@@ -96,3 +96,20 @@ body {
         padding-top: 164px;
     }
 }
+
+/* Fix Mobile/Tablet navbar */
+@media (max-width: 992px) {
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar-toggler {
+        border: none;
+        color: black;
+    }
+
+    .nav-link {
+        padding: 0 .9rem;
+    }
+}

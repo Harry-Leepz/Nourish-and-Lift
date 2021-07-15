@@ -5,7 +5,6 @@
       aria-haspopup="true" aria-expanded="false">
       <div class="text-center">
         <div><i class="fas fa-search fa-lg"></i></div>
-        <p class="my-0">Search</p>
       </div>
     </a>
     <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
@@ -25,10 +24,9 @@
   </li>
   <!-- Wishlist Icon -->
   <li class="list-inline-item">
-    <a class="nav-link text-black" href="">
+    <a class="nav-link text-black d-block d-lg-none" href="">
       <div class="text-center">
         <div><i class="fas fa-heart fa-lg"></i></div>
-        <p class="my-0">Wishlist</p>
       </div>
     </a>
   </li>
@@ -38,7 +36,6 @@
       aria-haspopup="true" aria-expanded="false">
       <div class="text-center">
         <div><i class="fas fa-user fa-lg"></i></div>
-        <p class="my-0">My Account</p>
       </div>
     </a>
     <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -60,13 +57,6 @@
       href="">
       <div class="text-center">
         <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-        <p class="my-0">
-          {% if grand_total %}
-          ${{ grand_total|floatformat:2 }}
-          {% else %}
-          $0.00
-          {% endif %}
-        </p>
       </div>
     </a>
   </li>
