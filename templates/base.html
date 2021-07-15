@@ -20,7 +20,7 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto&display=swap" >
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
   {% endblock %}
 
@@ -50,7 +50,7 @@
 <body>
   <!-- Main Header Starts (Style and design taken from Bootstrap and CI Boutique Ado Project) -->
   <header class="container-fluid fixed-top">
-    <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+    <div id="topnav" class="row bg-white d-none d-lg-flex">
       <!-- Left side navbar with about and shop links -->
       <div class="col-12 col-lg-4 my-auto py-lg-0">
         <ul class="list-inline list-unstyled text-center text-lg-left my-0">
@@ -61,12 +61,12 @@
           </li>
           <li class="list-inline-item">
             <a class="nav-link main-logo-link" href="#">
-              <h4 class="heavy-font text-black my-0">About</h4>
+              <h4 class="francois text-black my-0">About</h4>
             </a>
           </li>
           <li class="list-inline-item">
             <a class="nav-link main-logo-link" href="#">
-              <h4 class="heavy-font text-black my-0">Shop</h4>
+              <h4 class="francois text-black my-0">Shop</h4>
             </a>
           </li> 
         </ul>
@@ -77,7 +77,7 @@
           <div class="input-group w-100">
             <input class="form-control border border-black" type="text" name="q" placeholder="Search products via name or descripion">
             <div class="input-group-append">
-              <button class="form-control btn btn-black border border-black" type="submit">
+              <button class="form-control btn btn-black border border-black rounded-0" type="submit">
                 Search
               </button>
             </div>
