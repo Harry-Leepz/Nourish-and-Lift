@@ -42,14 +42,16 @@
                                         <p class="text-black lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
                                     </div>
                                 </div>
+                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-3" value="Add to Bag">
+                                <a class="btn btn-wishlist rounded-0 mt-3" href="">
+                                    <i class="far fa-heart" data-toggle="tooltip" data-placement="right" title="Add to wishlist"></i>
+                                </a>
                                 <hr class="w-80 mb-1">
                             </div>
                         </div>
-                        
                     </div>
                 {% endfor %}
             </div>
         </div>
-    </div>
-       
+    </div>      
 {% endblock %}

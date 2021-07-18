@@ -71,6 +71,10 @@ hr {
     color: #001735;
 }
 
+.btn-wishlist {
+   border: 2px solid #001735;
+}
+
 /* Form Styles */
 .form-control {
     border-radius: 0;
