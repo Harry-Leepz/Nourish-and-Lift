@@ -10,11 +10,34 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
+    <div class="white-overlay"></div> 
+    <div class="container-fluid">
         <div class="row">
-            <div class="col">
-                {{ products }}
+            <div class="col text-center mt-3">
+                <h2 class="text-black hero-font text-uppercase">Products</h2>
+                <hr class="w-50 mb-1">
+            </div>
+        </div>
+        <div class="product-container col-10 offset-1">
+            <div class="row mt-1 mb-2"></div>
+            <div class="row">
+                {% for product in products %}
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card h-100 border-0">
+                            {% if product.image %}
+                                <a href="">
+                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt=" {{ product.name }}">
+                                </a>
+                            {% else %}
+                                <a href="">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png " alt=" {{ product.name }}">
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>
+       
 {% endblock %}

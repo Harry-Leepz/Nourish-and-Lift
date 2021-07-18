@@ -79,6 +79,18 @@ body {
     border: 2px solid #001735 !important;
 }
 
+/* White overlay to cover the background image on body */
+
+.white-overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #fafafa;
+    z-index: -1;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

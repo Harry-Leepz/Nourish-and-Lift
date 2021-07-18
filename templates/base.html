@@ -5,161 +5,164 @@
 
 <head>
 
-  {% block meta %}
+    {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  {% endblock %}
+    {% endblock %}
 
-  {% block extra_meta %}
-  {% endblock %}
+    {% block extra_meta %}
+    {% endblock %}
 
-  {% block corecss %}
+    {% block corecss %}
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
-  {% endblock %}
+    {% endblock %}
 
-  {% block extra_css %}
-  {% endblock %}
+    {% block extra_css %}
+    {% endblock %}
 
-  {% block corejs %}
+    {% block corejs %}
     <!-- Font Awesome Scripts-->
     <script src="https://kit.fontawesome.com/3e878badfa.js" crossorigin="anonymous"></script>
     <!-- Bootstrap Scripts-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
-      integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
     </script>
-  {% endblock %}
+    {% endblock %}
 
-  {% block extra_js %}
-  {% endblock %}
+    {% block extra_js %}
+    {% endblock %}
 
-  <title>Nourish and Lift {% block extra_title%}{% endblock %}</title>
+    <title>Nourish and Lift {% block extra_title%}{% endblock %}</title>
 </head>
 
 <body>
-  <!-- Main Header Starts (Style and design taken from Bootstrap and CI Boutique Ado Project) -->
-  <header class="container-fluid fixed-top">
-    <div id="topnav" class="row bgc-offwhite d-none d-lg-flex">
-      <!-- Left side navbar with about and shop links -->
-      <div class="col-12 col-lg-4 my-auto py-lg-0">
-        <ul class="list-inline list-unstyled text-center text-lg-left my-0">
-          <li class="list-inline-item">
-            <a class="nav-link main-logo-link" href="{% url 'home' %}">
-              <h5 class="hero-font text-black my-0">Home</h5>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a class="nav-link main-logo-link" href="#">
-              <h5 class="hero-font text-black my-0">About</h5>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a class="nav-link main-logo-link" href="#">
-              <h5 class="hero-font text-black my-0">Shop</h5>
-            </a>
-          </li> 
-        </ul>
-      </div>
-      <!-- Center navbar with search bar -->
-      <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-        <form method="GET" action="">
-          <div class="input-group w-100">
-            <input class="form-control border border-black" type="text" name="q" placeholder="Search products via name or descripion">
-            <div class="input-group-append">
-              <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                Search
-              </button>
+    <!-- Main Header Starts (Style and design taken from Bootstrap and CI Boutique Ado Project) -->
+    <header class="container-fluid fixed-top">
+        <div id="topnav" class="row bgc-offwhite d-none d-lg-flex">
+            <!-- Left side navbar with about and shop links -->
+            <div class="col-12 col-lg-4 my-auto py-lg-0">
+                <ul class="list-inline list-unstyled text-center text-lg-left my-0">
+                    <li class="list-inline-item">
+                        <a class="nav-link main-logo-link" href="{% url 'home' %}">
+                            <h5 class="hero-font text-black my-0">Home</h5>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="nav-link main-logo-link" href="#">
+                            <h5 class="hero-font text-black my-0">About</h5>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="nav-link main-logo-link" href="#">
+                            <h5 class="hero-font text-black my-0">Shop</h5>
+                        </a>
+                    </li>
+                </ul>
             </div>
-          </div>
-        </form>
-      </div>
-      <!-- Right side navbar with account, wishlist and checkout links  -->
-      <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-        <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-          <li class="list-inline-item dropdown">
-            <a class="nav-link text-black" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <div class="text-center">
-                <div><i class="fas fa-user fa-lg"></i></div>
-                <p class="hero-font my-0">Account</p>
-              </div>
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="user-options"> 
-              {% if request.user.is_authenticated %}
-                {% if request.user.is_superuser %}
-                  <a class="dropdown-item" href="">Product Management</a>
-                {% endif %}
-                <a class="dropdown-item" href="">My Profile</a>
-                <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
-                {% else %}
-                <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
-                <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
-              {% endif %}
+            <!-- Center navbar with search bar -->
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <form method="GET" action="">
+                    <div class="input-group w-100">
+                        <input class="form-control border border-black" type="text" name="q"
+                            placeholder="Search products via name or descripion">
+                        <div class="input-group-append">
+                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
-          </li>
-          <li class="list-inline-item">
-            <a class="nav-link text-black" href="">
-              <div class="text-center">
-                <div><i class="fas fa-heart fa-lg"></i></div>
-                <p class="hero-font my-0">Wishlist</p>
-              </div>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
-              <div class="text-center">
-                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                <p class="hero-font my-0">
-                  {% if grand_total %}
-                    £{{ grand_total|floatformat:2 }}
-                  {% else %}
-                    £0.00
-                  {% endif %}
-                </p>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="row">
-      <nav class="navbar navbar-expand-lg navbar-light bgc-offwhite w-100">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
-          aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="icon"><i class="text-black fas fa-bars"></i></span>
-        </button>
-        {% include 'includes/mobile-top-header.html' %}
-        {% include 'includes/main-nav.html' %}
-      </nav>
-    </div>
-  </header>
-  <!-- Main Header Ends -->
+            <!-- Right side navbar with account, wishlist and checkout links  -->
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                    <li class="list-inline-item dropdown">
+                        <a class="nav-link text-black" href="#" id="user-options" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <div class="text-center">
+                                <div><i class="fas fa-user fa-lg"></i></div>
+                                <p class="hero-font my-0">Account</p>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            {% if request.user.is_authenticated %}
+                            {% if request.user.is_superuser %}
+                            <a class="dropdown-item" href="">Product Management</a>
+                            {% endif %}
+                            <a class="dropdown-item" href="">My Profile</a>
+                            <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
+                            {% else %}
+                            <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
+                            <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
+                            {% endif %}
+                        </div>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="nav-link text-black" href="">
+                            <div class="text-center">
+                                <div><i class="fas fa-heart fa-lg"></i></div>
+                                <p class="hero-font my-0">Wishlist</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                            href="">
+                            <div class="text-center">
+                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                <p class="hero-font my-0">
+                                    {% if grand_total %}
+                                    £{{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                    £0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light bgc-offwhite w-100">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                    aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon"><i class="text-black fas fa-bars"></i></span>
+                </button>
+                {% include 'includes/mobile-top-header.html' %}
+                {% include 'includes/main-nav.html' %}
+            </nav>
+        </div>
+    </header>
+    <!-- Main Header Ends -->
 
-  {% if messages %}
+    {% if messages %}
     <div class="message-container"></div>
-  {% endif %}
+    {% endif %}
 
-  {% block page_header %}
-  {% endblock %}
+    {% block page_header %}
+    {% endblock %}
 
-  {% block content %}
-  {% endblock %}
+    {% block content %}
+    {% endblock %}
 
-  {% block postloadjs %}
-  {% endblock %}
+    {% block postloadjs %}
+    {% endblock %}
 
 </body>
 
