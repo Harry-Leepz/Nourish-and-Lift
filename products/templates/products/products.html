@@ -25,15 +25,27 @@
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                         <div class="card h-100 border-0">
                             {% if product.image %}
-                                <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt=" {{ product.name }}">
-                                </a>
+                            <a href="">
+                                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt=" {{ product.name }}">
+                            </a>
                             {% else %}
-                                <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png " alt=" {{ product.name }}">
-                                </a>
+                            <a href="">
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png " alt=" {{ product.name }}">
+                            </a>
                             {% endif %}
+                            <div class="card-body pb-0">
+                                <p class="mb-0 text-black font-weight-bold"> {{ product.name }}</p>
+                            </div>
+                            <div class="card-footer bgc-offwhite pt-0 border-0 text-left">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="text-black lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                                    </div>
+                                </div>
+                                <hr class="w-80 mb-1">
+                            </div>
                         </div>
+                        
                     </div>
                 {% endfor %}
             </div>
