@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+	<div class="container header-container">
+		<div class="row">
+			<div class="col"></div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block content %}
+    <div class="white-overlay"></div> 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                <div class="image-container mt-5">
+                    {% if product.image %}
+                        <a href="{{ product.image.url }}" target="_blank">
+                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt=" {{ product.name }}">
+                        </a>
+                    {% else %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png " alt=" {{ product.name }}">
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="products-detail-container my-5">
+                    <h2 class="mb-4 pt-md-5 text-black font-weight-bold"> {{ product.name }}</h2>
+                    <h2 class="text-black lead mb-4 text-left font-weight-bold">£{{ product.price }}</h2>
+                    
+                </div>
+            </div>
+            <div class="col-12 col-md-10 col-lg-6 offset-lg-3">
+                <div class="products-description-container">
+                    <h2 class="text-black font-weight-bold mt-5">About this product</h2>
+                    <p class="text-black lead mt-2 text-left mt-5">{{ product.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>      
+{% endblock %}
+            
+            
