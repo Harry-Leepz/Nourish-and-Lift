@@ -128,10 +128,21 @@ hr {
 
     .navbar-toggler {
         border: none;
-        color: black;
+        color: #001735;
     }
 
     .nav-link {
         padding: 0 .9rem;
+    }
+}
+
+/* Add additional padding to the top to drop body on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
     }
 }
