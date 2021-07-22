@@ -38,16 +38,16 @@
         <div><i class="fas fa-user fa-lg"></i></div>
       </div>
     </a>
-    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+    <div class="dropdown-menu font-weight-bold border-0" aria-labelledby="user-options">
       {% if request.user.is_authenticated %}
       {% if request.user.is_superuser %}
-      <a href="{% url 'account_logout' %}" class="dropdown-item">Product Management</a>
+      <a href="{% url 'account_logout' %}" class="dropdown-item font-weight-bold">Product Management</a>
       {% endif %}
       <a href="" class="dropdown-item">My Profile</a>
-      <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+      <a href="{% url 'account_logout' %}" class="dropdown-item font-weight-bold">Logout</a>
       {% else %}
-      <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-      <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+      <a href="{% url 'account_signup' %}" class="dropdown-item font-weight-bold">Register</a>
+      <a href="{% url 'account_login' %}" class="dropdown-item font-weight-bold">Login</a>
       {% endif %}
     </div>
   </li>

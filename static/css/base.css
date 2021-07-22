@@ -7,29 +7,22 @@ body {
     background: cover;
     height: calc(100vh - 164px);
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    font-weight: 700;
     background-color: #fafafa !important;
 }
 
+/* -------------------------------- Color CSS */
 .bgc-offwhite {
     background-color: #fafafa;
 }
 
-hr {
-    border-top: 2px solid #001735;
+.dropdown-menu {
+    background-color: #001735;
 }
 
-.main-logo-link {
-    width: fit-content;
-}
-
-/* Font Styles */
-.roboto {
-    font-family: 'Roboto', sans-serif;
-}
-
-.hero-font {
+.dropdown-item {
     font-weight: 700;
+    color: #fafafa;
 }
 
 .text-black {
@@ -38,6 +31,29 @@ hr {
 
 .text-white {
     color: #fafafa;
+}
+
+/* -------------------------------- Project CSS */
+hr {
+    border-top: 2px solid #001735;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.hero-font {
+    font-weight: 700;
+}
+
+.white-overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #fafafa;
+    z-index: -1;
 }
 
 /* from Bulma */
@@ -49,7 +65,7 @@ hr {
     width: 1.5rem;
 }
 
-/* Button Styles */ 
+/* -------------------------------- Button Styles */
 .shop-now-button {
     background: white;
     color: #001735;
@@ -59,6 +75,7 @@ hr {
 .btn-black {
     background: #001735;
     color: white;
+    border: 2px solid #001735;
 }
 
 .shop-now-button:hover,
@@ -75,7 +92,7 @@ hr {
    border: 2px solid #001735;
 }
 
-/* Form Styles */
+/* -------------------------------- Form Styles */
 .form-control {
     border-radius: 0;
 }
@@ -84,16 +101,7 @@ hr {
     border: 2px solid #001735 !important;
 }
 
-/* White overlay to cover the background image on body */
-.white-overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: #fafafa;
-    z-index: -1;
-}
+
 
 /* -------------------------------- Media Queries */
 
@@ -104,7 +112,7 @@ hr {
   }
 }
 
-/* fixed top navbar only on medium and up */
+/* Fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
