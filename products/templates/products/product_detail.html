@@ -29,8 +29,14 @@
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="products-detail-container my-5">
                     <h2 class="mb-4 pt-md-5 text-black font-weight-bold"> {{ product.name }}</h2>
-                    <h2 class="text-black lead mb-4 text-left font-weight-bold">£{{ product.price }}</h2>
-                    
+                    <h2 class="text-black lead mb-2 text-left font-weight-bold">£{{ product.price }}</h2>
+                    {% if product.category %}
+                    <p class="small">
+                        <a class="text-muted text-black font-weight-bold" href="{% url 'products' %}?category={{ product.category.name }}">
+                            <i class="fas fa-hashtag"></i> {{ product.category.friendly_name }}
+                        </a>
+                    </p>
+                    {% endif %}
                 </div>
             </div>
             <div class="col-12 col-md-10 col-lg-6 offset-lg-3">
