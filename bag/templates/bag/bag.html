@@ -10,5 +10,24 @@
 {% endblock %}
 
 {% block content %}
-
+	<!-- White Overlay -->
+	<div class="white-overlay"></div>
+	<div class="container mb-2">
+		<div class="row">
+			<div class="col">
+				<h2 class="text-black hero-font text-uppercase">Products</h2>
+				<hr class="w-50 mb-1">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				{% if bag_items %}
+					<div class="table-responsive rounder"></div>
+				{% else %}
+					<p class="mb-5">Your bag is empty...</p>
+					<a href="{% url 'products' %}" class="hero-font shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Take Me Shopping</a>
+				{% endif %}
+			</div>
+		</div>
+	</div> 
 {% endblock %}
