@@ -78,6 +78,7 @@ hr {
     border: 2px solid #001735;
 }
 
+.btn-outline-black:hover,
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
@@ -86,6 +87,11 @@ hr {
 .btn-black:focus {
     background: #f57c00;
     color: #001735;
+}
+
+.btn-outline-black {
+    color: #001735;
+    border: 2px solid #001735;
 }
 
 .btn-wishlist {
