@@ -47,7 +47,33 @@
 										<p class="my-0">£ {{ item.product.price }}</p>
 									</td>
 									<td class="py-3 w-25">
-										<p class="my-0">{{ item.quantity }}</p>
+										<form class="form update-form" method="POST" action="">
+											{% csrf_token %}
+											<div class="form-group">
+												<div class="input-group">
+													<div class="input-group-prepend">
+														<button class="decrement-qty btn btn-sm btn-black rounded-0" 
+															data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+															<span>
+																<i class="fas fa-minus fa-small"></i>
+															</span>
+														</button>
+													</div>
+													<input class="form-control form-control-sm qty_input" type="number"
+														name="quantity" value="{{ item.quantity }}" min="1" max="99"
+														data-item_id="{{ item.item_id }}"
+														id="id_qty_{{ item.item_id }}">
+													<div class="input-group-append">
+														<button class="increment-qty btn btn-sm btn-black rounded-0"
+															data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+															<span>
+																<i class="fas fa-plus fa-small"></i>
+															</span>
+														</button>
+													</div>
+												</div>
+											</div>
+										</form>
 									</td>
 									<td class="py-3">
 										<p class="my-0">£ {{ item.product.price }}</p>
