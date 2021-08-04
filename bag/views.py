@@ -1,10 +1,10 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, HttpResponse
 
 
 def view_bag(request):
     """
     A view to return the shopping bag
-    with items the customer wants to purchase
+    with items the customer wants to purchase.
     """
 
     return render(request, 'bag/bag.html')
@@ -45,3 +45,21 @@ def adjust_bag(request, item_id):
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
+
+
+def remove_from_bag(request, item_id):
+    """
+    A view to allow the users to remove an item from the bag
+    irrespective of the quantity.
+    """
+
+    try:
+        bag = request.session.get('bag', {})
+
+        bag.pop(item_id)
+
+        request.session['bag'] = bag
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        return HttpResponse(status=500)
