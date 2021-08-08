@@ -151,7 +151,14 @@
     <!-- Main Header Ends -->
 
     {% if messages %}
-    <div class="message-container"></div>
+
+    <!-- User Notification Starts (Style and design taken from Bootstrap and CI Boutique Ado Project) -->
+    <div class="message-container">
+        {% for message in messages %}   
+            {% include 'includes/toasts/toast_success.html '%}
+        {% endfor %}
+    </div>
+    <!-- User Notification Ends -->
     {% endif %}
 
     {% block page_header %}
@@ -161,6 +168,9 @@
     {% endblock %}
 
     {% block postloadjs %}
+    <script type="text/javascript">
+         $('.toast').toast('show');
+    </script>
     {% endblock %}
 
 </body>
