@@ -1,11 +1,11 @@
 /*
-CSS from here: 
-https://stripe.com/docs/stripe-js
+  CSS from here: 
+  https://stripe.com/docs/stripe-js
 */
 
 /*
-    The CSS Styles were taken from Stripe documentation,
-    and the Code Institute, Boutique Ado Project.
+  The CSS Styles were taken from Stripe documentation,
+  and the Code Institute, Boutique Ado Project.
 */
 
 .StripeElement,
@@ -44,4 +44,28 @@ https://stripe.com/docs/stripe-js
 #card-element {
     color: #000;
     border: 1px solid #000;
+}
+
+/*
+  The CSS Style for the loading overlay
+  were taken from the Code Institute, Boutique Ado Project.
+*/
+
+#loading-overlay {
+	display: none;
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(89, 94, 95, 0.85);
+    z-index: 9999;
+}
+
+.loading-spinner {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
 }
