@@ -3,12 +3,11 @@ html {
 }
 
 body {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/media/homepage-heroimage.jpg') no-repeat center center fixed;
-    background: cover;
     height: calc(100vh - 164px);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 700;
-    background-color: #fafafa !important;
+    color: #fafafa;
+    background-color: #212121;
 }
 
 /* -------------------------------- Color CSS */
@@ -34,8 +33,14 @@ body {
 }
 
 /* -------------------------------- Project CSS */
+.hero-image {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/media/homepage-heroimage.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
 hr {
-    border-top: 2px solid #001735;
+    border-top: 1px solid #484848;
 }
 
 .main-logo-link {
