@@ -12,11 +12,11 @@ body {
 
 /* -------------------------------- Color CSS */
 .bgc-offwhite {
-    background-color: #fafafa;
+    background-color: #212121;
 }
 
 .dropdown-menu {
-    background-color: #001735;
+    background-color: #212121;
 }
 
 .dropdown-item {
@@ -25,10 +25,6 @@ body {
 }
 
 .text-black {
-    color: #001735 !important;
-}
-
-.text-white {
     color: #fafafa;
 }
 
@@ -72,15 +68,15 @@ hr {
 
 /* -------------------------------- Button Styles */
 .shop-now-button {
-    background: white;
-    color: #001735;
+    background: #fafafa;
+    color: #484848;
     min-width: 260px;
 }
 
 .btn-black {
-    background: #001735;
-    color: white;
-    border: 2px solid #001735;
+    background: #484848;
+    color: #fafafa;
+    border: 1px solid  #484848;
 }
 
 .btn-outline-black:hover,
@@ -90,13 +86,13 @@ hr {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #f57c00;
+    background: #fafafa;
     color: #001735;
 }
 
 .btn-outline-black {
     color: #001735;
-    border: 2px solid #001735;
+    border: 1px solid #fafafa;
 }
 
 .btn-wishlist {
@@ -122,6 +118,59 @@ hr {
 
 .border-black {
     border: 1px solid #001735;
+}
+
+/* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem; /* mt-4 */
+    color: #fafafa; /* text-secondary */
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #484848;
+    border: 1px solid #fafafa;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+	color: #001735;
+    background-color: #fafafa;
+}
+
+.allauth-form-inner-content a {
+	color: #fafafa; /* text-info */
 }
 
 /* -------------------------------- Message Styles */

@@ -10,7 +10,6 @@
 {% endblock %}
 
 {% block content %}
-    <div class="white-overlay"></div> 
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
@@ -53,12 +52,10 @@
                                 <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png " alt=" {{ product.name }}">
                             </a>
                             {% endif %}
-                            <div class="card-body pb-0">
-                                <p class="mb-0 text-black font-weight-bold"> {{ product.name }}</p>
-                            </div>
                             <div class="card-footer bgc-offwhite pt-0 border-0 text-left">
                                 <div class="row">
                                     <div class="col">
+                                        <p class="mb-0 text-black font-weight-bold"> {{ product.name }}</p>
                                         <p class="text-black lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
                                         {% if product.category %}
                                         <p class="small">
@@ -73,7 +70,7 @@
                                 <a class="btn btn-wishlist rounded-0 mt-1" href="">
                                     <i class="far fa-heart" data-toggle="tooltip" data-placement="right" title="Add to wishlist"></i>
                                 </a>
-                                <hr class="w-80 mb-1">
+                                <hr class="w-80 mb-3">
                             </div>
                         </div>
                     </div>
