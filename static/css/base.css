@@ -28,6 +28,10 @@ body {
     color: #fafafa;
 }
 
+.text-muted {
+    color: #9e9e9e !important;
+}
+
 /* -------------------------------- Project CSS */
 .hero-image {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/media/homepage-heroimage.jpg') no-repeat center center fixed;
@@ -87,16 +91,16 @@ hr {
 .btn-black:active,
 .btn-black:focus {
     background: #fafafa;
-    color: #001735;
+    color: #212121;
 }
 
 .btn-outline-black {
-    color: #001735;
+    color: #212121;
     border: 1px solid #fafafa;
 }
 
 .btn-wishlist {
-   border: 2px solid #001735;
+   border: 1px solid #001735;
 }
 
 .btt-button {
