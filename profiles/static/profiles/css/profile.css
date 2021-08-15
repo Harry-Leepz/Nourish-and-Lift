@@ -21,3 +21,11 @@
     max-height: 416px;
     overflow-y: auto;
 }
+
+.table {
+    color: #fafafa;
+}
+
+a {
+    color: #9e9e9e;
+}
