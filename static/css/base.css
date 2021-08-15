@@ -185,6 +185,10 @@ hr {
     z-index: 99999999;
 }
 
+.toast {
+    background-color: #424242;
+}
+
 .custom-toast {
     overflow: visible;
 }

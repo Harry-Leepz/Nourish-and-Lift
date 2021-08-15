@@ -1,21 +1,21 @@
 <div class="toast custom-toast rounded-0 border-top-0" data-autohide='false'>
     <div class="arrow-up arrow-success"></div>
     <div class="w-100 toast-capper bg-success"></div>
-    <div class="toast-header bg-white text-dark">
+    <div class="toast-header rounded-0 text-dark">
         <strong class="mr-auto">Success!</strong>
         <button class="ml-2 mb-1 close text-dark" type="button" data-dismiss="toast" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
-    <div class="toast-body bg-white">
+    <div class="toast-body">
         <div class="row">
             <div class="col">
                 {{ message }}
                 <hr class="mt-1 mb-3">
             </div>
         </div>
-        {% if grand_total %}
-            <p class="logo-font bg-white text-black py-1">Your Bag ({{ product_count }})</p>
+        {% if grand_total and not on_profile_page %}
+            <p class="logo-font text-black py-1">Your Bag ({{ product_count }})</p>
             <div class="bag-notification-wrapper">
                 {% for item in bag_items %}
                     <div class="row">
