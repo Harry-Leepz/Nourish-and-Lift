@@ -93,9 +93,12 @@
                 <h2 class="text-black font-weight-bold mt-5">Reviews</h2>
                 <!--Review Form -->
                 {% if request.user.is_authenticated %}
-                    <form action="">
+                    <form method="POST" action="{% url 'add_review' product.id %}">
                         {% csrf_token %}
                         {{ form|crispy }}
+                        <div class="text-right">
+                            <button class="btn btn-info rounded-0 font-weight-bold" type="submit">Submit Review</button>
+                        </div>
                     </form>
                 {% else %}
                     <p class="small"> You must have an account or be logged in to leave a review.</p>
