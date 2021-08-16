@@ -9,11 +9,11 @@ Order Total: £{{ order.order_total }}
 Delivery: £{{ order.delivery_cost }}
 Grand Total: £{{ order.grand_total }}
 
-Your order will be shipped to {{ order.street address1 }} in {{ order.town_or_city }}, {{ order.country }}.
+Your order will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
 
 We have your contact number on record as {{ order.phone_number }}.
 
-If you have any questions, please feel free to contact us at nandl@gmail.com.
+If you have any questions, please feel free to contact us at {{ contact_email }}.
 
 Thank you for your order,
 
