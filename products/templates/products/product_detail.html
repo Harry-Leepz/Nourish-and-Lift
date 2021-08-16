@@ -87,6 +87,24 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12 col-md-10 col-lg-6 offset-lg-3">
+                <div class="review-container">
+                    <h2 class="text-black font-weight-bold mt-5">Reviews</h2>
+                    {% for review in product.reviews.all %}
+                        <div class="card">
+                            <p><strong>Date:</strong>{{ review.date_added|date:"d-m-Y"}}</p>
+                            <div class="card-body">
+                            <h5 class="card-title">{{ review.title }}</h5>
+                            <p class="card-text">{{ review.content }}</p>
+                            </div>
+                        </div>
+                    {% empty %}
+                        <p>No reviews for this product, you can be the first...</p>
+                    {% endfor%}
+                </div>
+            </div>
+        </div>
     </div>      
 {% endblock %}
 
