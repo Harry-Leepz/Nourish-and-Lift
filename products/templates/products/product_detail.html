@@ -89,33 +89,36 @@
         </div>
         <!-- Product Reviews-->
         <div class="row">
-            <div class="col-12 col-md-10 col-lg-6 offset-lg-3">
-                <div class="review-container">
-                    <h2 class="text-black font-weight-bold mt-5">Reviews</h2>
-                    <!--Review Form -->
-                    {% if request.user.is_authenticated %}
-                        <form action="">
-                            {% csrf_token %}
-                            {{ form|crispy }}
-                        </form>
-                    {% else %}
-                        <p> You must have an account or be logged in to leave a review.</p>
-                    {% endif %}
-                    <!-- Showing all product reviews-->
-                    {% for review in product.reviews.all %}
-                        <div class="card">
-                            <p><strong>Date:</strong>{{ review.date_added|date:"d-m-Y"}}</p>
-                            <div class="card-body">
-                            <h5 class="card-title">{{ review.title }}</h5>
-                            <p class="card-text">{{ review.content }}</p>
-                            </div>
-                        </div>
-                    {% empty %}
-                        <p>No reviews for this product, you can be the first...</p>
-                    {% endfor%}
-                </div>
+            <div class="col-12 col-md-10 col-lg-6 offset-lg-3 mt-5">
+                <h2 class="text-black font-weight-bold mt-5">Reviews</h2>
+                <!--Review Form -->
+                {% if request.user.is_authenticated %}
+                    <form action="">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                    </form>
+                {% else %}
+                    <p class="small"> You must have an account or be logged in to leave a review.</p>
+                {% endif %}
             </div>
         </div>
+        <div class="row">
+            <div class="col-12 col-md-10 col-lg-6 offset-lg-3">  
+                <!-- Showing all product reviews-->
+                {% for review in product.reviews.all %}
+                    <div class="card review-container mt-5">
+                        <div class="card-body">
+                            <p class="small text-muted"> by {{ review.user }} on {{ review.date_added|date:"d-m-Y"}}</p>    
+                            <h5 class="card-title">{{ review.title }}</h5>
+                            <p><i class="fas fa-star"></i> {{ review.rating }}/5 </p>
+                            <p class="card-text">{{ review.content }}</p>
+                        </div>
+                    </div>
+                {% empty %}
+                    <p>No reviews for this product, you can be the first...</p>
+                {% endfor%}
+            </div>
+        </div> 
     </div>      
 {% endblock %}
 

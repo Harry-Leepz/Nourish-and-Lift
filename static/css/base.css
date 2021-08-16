@@ -51,15 +51,7 @@ hr {
     font-weight: 700;
 }
 
-.white-overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: #fafafa;
-    z-index: -1;
-}
+
 
 /* from Bulma */
 .icon {
@@ -246,6 +238,18 @@ hr {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+/* -------------------------------- Review Styles */
+
+.card {
+    background-color: #212121;
+}
+
+.review-container {
+    border-radius: 0;
+    border: 1px solid #17a2b8;
+    margin-bottom: 1rem;
 }
 
 /* -------------------------------- Media Queries */
