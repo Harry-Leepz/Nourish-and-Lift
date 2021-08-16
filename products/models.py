@@ -45,6 +45,14 @@ class ProductReview(models.Model):
     class Meta:
         ordering = ['-date_added']
 
+    rating_selection = (
+        (5, '5'),
+        (4, '4'),
+        (3, '3'),
+        (2, '2'),
+        (1, '1'),
+    )
+
     product = models.ForeignKey(Product,
                                 related_name='reviews',
                                 null=True,
@@ -56,7 +64,7 @@ class ProductReview(models.Model):
                              on_delete=models.CASCADE)
     title = models.CharField(max_length=254)
     content = models.TextField()
-    rating = models.IntegerField()
+    rating = models.IntegerField(choices=rating_selection, default=3)
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

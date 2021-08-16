@@ -3,7 +3,8 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from.models import Product, Category
+from .models import Product, Category
+from .forms import ReviewForm
 
 
 def all_products(request):
@@ -66,9 +67,11 @@ def product_detail(request, product_id):
     """
 
     product = get_object_or_404(Product, pk=product_id)
+    form = ReviewForm()
 
     context = {
         'product': product,
+        'form': form,
     }
 
     return render(request, 'products/product_detail.html', context)
