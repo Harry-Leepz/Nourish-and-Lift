@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
 
 from profiles.models import UserProfile
 from products.models import Product
@@ -30,5 +31,7 @@ def add_to_wishlist(request, product_id):
     """
     product = get_object_or_404(Product, pk=product_id)
 
-    wishlist = WishList.objects.get_or_create(user=request.user)
-    wishlist.product.add(product)
+    wishlist, created = WishList.objects.get_or_create(user=request.user)
+    wishlist.products.add(product)
+
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
