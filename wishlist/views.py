@@ -11,17 +11,19 @@ from .models import WishList, WishListItem
 @login_required
 def wishlist(request):
     """
-    A view to render the users wishlist
+    A view to render the user's wishlist
     """
+    wishlist = None
+    try:
+        wishlist = WishList.objects.get(user=request.user)
+    except WishList.DoesNotExist:
+        pass
 
-    items = WishListItem.objects.all()
-
-    template = 'wishlist/wishlist.html'
     context = {
-        'items': items,
+        'wishlist': wishlist,
     }
 
-    return render(request, template, context)
+    return render(request, 'wishlist/wishlist.html', context)
 
 
 @login_required

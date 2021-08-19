@@ -10,7 +10,11 @@
 {% endblock %}
 
 {% block content %}
-	{% for item in items.all %}
-		<p>{{ item.name }}</p>
+
+	{% for product in wishlist.products.all %}
+		<h1>{{ product.name }}</h1>
+	{% empty %}
+		<h1>this mofo is empty</h1>
 	{% endfor %}
+	
 {% endblock %}
