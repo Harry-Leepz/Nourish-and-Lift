@@ -60,17 +60,12 @@
                 <ul class="list-inline list-unstyled text-center text-lg-left my-0">
                     <li class="list-inline-item">
                         <a class="nav-link main-logo-link" href="{% url 'home' %}">
-                            <h5 class="hero-font text-black my-0">Home</h5>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="nav-link main-logo-link" href="#">
-                            <h5 class="hero-font text-black my-0">About</h5>
+                            <h5 class="hero-font my-0">Home</h5>
                         </a>
                     </li>
                     <li class="list-inline-item">
                         <a class="nav-link main-logo-link" href="{% url 'products' %}">
-                            <h5 class="hero-font text-black my-0">Shop</h5>
+                            <h5 class="hero-font my-0">Shop</h5>
                         </a>
                     </li>
                 </ul>
@@ -82,8 +77,8 @@
                         <input class="form-control border border-black" type="text" name="q"
                             placeholder="Search products via name or descripion">
                         <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                                Search
+                            <button class="form-control btn btn-info" type="submit">
+                                <i class="fas fa-search"></i>
                             </button>
                         </div>
                     </div>
@@ -93,7 +88,7 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
-                        <a class="nav-link text-black" href="#" id="user-options" data-toggle="dropdown"
+                        <a class="nav-link" href="#" id="user-options" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
@@ -114,7 +109,7 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a class="nav-link text-black" href="{% url 'wishlist' %}">
+                        <a class="nav-link" href="{% url 'wishlist' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-heart fa-lg"></i></div>
                                 <p class="hero-font my-0">Wishlist</p>
@@ -122,7 +117,7 @@
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}{% endif %} nav-link"
                             href="{% url 'view_bag' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
@@ -143,7 +138,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bgc-offwhite w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="icon"><i class="text-black fas fa-bars"></i></span>
+                    <span class="icon"><i class= fas fa-bars"></i></span>
                 </button>
                 {% include 'includes/mobile-top-header.html' %}
                 {% include 'includes/main-nav.html' %}
