@@ -112,6 +112,10 @@ hr {
     cursor: pointer;
 }
 
+.btn-width {
+    width: 70%;
+}
+
 /* -------------------------------- Form Styles */
 
 /* Allauth form formatting */
@@ -244,10 +248,15 @@ hr {
     background-color: #212121;
 }
 
+textarea.form-control {
+    height: 5rem;
+}
+
 .review-container {
-    border-radius: 0;
-    border: 1px solid #17a2b8;
-    margin-bottom: 1rem;
+    border-radius: 22px;
+    background: #212121;
+    box-shadow:  13px 13px 25px #1b1b1b,
+                -13px -13px 25px #272727;
 }
 
 /* -------------------------------- Media Queries */
