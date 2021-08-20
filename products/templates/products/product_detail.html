@@ -97,15 +97,26 @@
         <div class="row">
             <div class="col-12 col-md-10 col-lg-4 offset-lg-4 mt-5">
                 <h2 class="text-black font-weight-bold mt-5">Reviews</h2>
-                <!--Review Form -->
                 {% if request.user.is_authenticated %}
-                    <form method="POST" action="{% url 'add_review' product.id %}">
-                        {% csrf_token %}
-                        {{ form|crispy }}
-                        <div class="text-right">
-                            <button class="btn btn-info font-weight-bold" type="submit">Submit Review</button>
-                        </div>
-                    </form>
+                    {% if edit %}
+                        <!-- Edit Review Form -->
+                        <form method="POST" action="{% url 'edit_review' review.id %}">
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                            <div class="text-right">
+                                <button class="btn btn-info font-weight-bold" type="submit">Update Review</button>
+                            </div>
+                        </form>
+                    {% else %}
+                        <!--Review Form -->
+                        <form method="POST" action="{% url 'add_review' product.id %}">
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                            <div class="text-right">
+                                <button class="btn btn-info font-weight-bold" type="submit">Submit Review</button>
+                            </div>
+                        </form>
+                    {% endif %}
                 {% else %}
                     <p class="small"> You must have an account or be logged in to leave a review.</p>
                 {% endif %}
@@ -116,7 +127,16 @@
                 <!-- Showing all product reviews-->
                 {% for review in product.reviews.all %}
                     <div class="card review-container mt-5">
+                        {% if review.user == request.user or request.user.is_superuser %}
+                            <div class="card-head text-right">
+                                <a class="btn btn-info" href="{% url 'edit_review' review.id %}">
+                                    Edit Review
+                                </a>
+                            </div>
+                        {% endif %}
                         <div class="card-body">
+                            
+                            
                             <p class="small text-muted"> by {{ review.user }} on {{ review.date_added|date:"d-m-Y"}}</p>    
                             <p class="card-title">{{ review.title }}<i class="ml-5 fas fa-star"></i> {{ review.rating }}/5</p>
                             <p class="card-text lead">{{ review.content }}</p>
