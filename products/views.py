@@ -5,7 +5,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Product, Category, ProductReview
-from .forms import ReviewForm
+from .forms import ReviewForm, ProductForm
 
 
 def all_products(request):
@@ -25,7 +25,7 @@ def all_products(request):
             sortkey = request.GET['sort']
             sort = sortkey
             if sortkey == 'name':
-                sortkey = 'lowe_name'
+                sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
             if sortkey == 'category':
                 sortkey = 'category__name'
@@ -137,4 +137,18 @@ def edit_review(request, review_id):
         'product': product,
         'edit': True,
     }
+    return render(request, template, context)
+
+
+def add_product(request):
+    """
+    A view to allow admins to add new products
+    """
+
+    form = ProductForm
+    template = 'products/add_product.html'
+    context = {
+        'form': form
+    }
+
     return render(request, template, context)
