@@ -21,7 +21,7 @@
         <!-- Add Product Form -->
         <div class="row">
             <div class="col-12 col-md-6">
-                <h3 class="text-muted mb-3">Add a Product</h3>
+                <h3 class="text-muted mb-3">Add A Product</h3>
                 <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
