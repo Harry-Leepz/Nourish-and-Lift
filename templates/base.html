@@ -59,13 +59,11 @@
             <div class="col-12 col-lg-4 my-auto py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-left my-0">
                     <li class="list-inline-item">
-                        <a class="nav-link main-logo-link" href="{% url 'home' %}">
-                            <h5 class="hero-font my-0">Home</h5>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="nav-link main-logo-link" href="{% url 'products' %}">
-                            <h5 class="hero-font my-0">Shop</h5>
+                        <a class="nav-link" href="{% url 'home' %}">
+                            <div class="text-center">
+                                <div><i class="fas fa-home fa-lg"></i></div>
+                                <p class="hero-font my-0">Home</p>
+                            </div>
                         </a>
                     </li>
                 </ul>
@@ -135,10 +133,10 @@
             </div>
         </div>
         <div class="row">
-            <nav class="navbar navbar-expand-lg navbar-light bgc-offwhite w-100">
+            <nav class="navbar navbar-expand-lg bgc-offwhite w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="icon"><i class= fas fa-bars"></i></span>
+                    <span class="icon"><i class="text-light fas fa-bars"></i></span>
                 </button>
                 {% include 'includes/mobile-top-header.html' %}
                 {% include 'includes/main-nav.html' %}
