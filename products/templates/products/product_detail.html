@@ -127,6 +127,7 @@
                 <!-- Showing all product reviews-->
                 {% for review in product.reviews.all %}
                     <div class="card review-container mt-5">
+                        <!-- Edit Review Button-->
                         {% if review.user == request.user or request.user.is_superuser %}
                             <div class="card-head text-right">
                                 <a class="btn btn-info" href="{% url 'edit_review' review.id %}">
@@ -135,8 +136,6 @@
                             </div>
                         {% endif %}
                         <div class="card-body">
-                            
-                            
                             <p class="small text-muted"> by {{ review.user }} on {{ review.date_added|date:"d-m-Y"}}</p>    
                             <p class="card-title">{{ review.title }}<i class="ml-5 fas fa-star"></i> {{ review.rating }}/5</p>
                             <p class="card-text lead">{{ review.content }}</p>
@@ -147,7 +146,7 @@
                 {% endfor%}
             </div>
         </div> 
-    </div>      
+    </div>
 {% endblock %}
 
 {% block postloadjs %}

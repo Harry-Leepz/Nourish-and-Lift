@@ -110,7 +110,7 @@ def add_review(request, product_id):
 @login_required
 def edit_review(request, review_id):
     """
-    A view to allow the user to edit their review
+    A view to allow the users to edit their own review
     """
 
     review = get_object_or_404(ProductReview, pk=review_id)
