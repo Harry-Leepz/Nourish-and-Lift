@@ -309,6 +309,26 @@ textarea.form-control {
     text-shadow: none;
 }
 
+/* -------------------------------- Footer CSS */
+
+.social-link a i {
+    font-size: 2rem;
+    color: #fafafa;
+    margin-top: 2rem;
+}
+
+.social-link a i:hover {
+    color: #17a2b8;
+}
+
+.copyright-text {
+    color: #fafafa;
+}
+
+.footer-container {
+    border-top: 1px solid #17a2b8;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

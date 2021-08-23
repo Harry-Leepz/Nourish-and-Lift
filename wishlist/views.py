@@ -34,7 +34,7 @@ def add_to_wishlist(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
 
     # Create a wishlist for the user if they don't have one
-    wishlist, created = WishList.objects.get_or_create(user=request.user)
+    wishlist, _ = WishList.objects.get_or_create(user=request.user)
     # Add product to the wishlist
     wishlist.products.add(product)
     messages.info(request, "A new product was added to your wishlist")
