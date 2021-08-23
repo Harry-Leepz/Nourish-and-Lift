@@ -10,12 +10,13 @@
 {% endblock %}
 
 {% block content %}
+	<!-- User Wishlist Page -->
 	<div class="text-center mt-3">
 		<h1 class="hero-font text-uppercase">Your Wish List</h1>
 		<hr class="w-50 mb-3">
 	</div>
 	{% for product in wishlist.products.all %}
-		<!-- User WishList Page -->
+		<!-- User WishList Items -->
 		<div class="container-fluid">
 			<div class="row justify-content-center">
 				<div class="col-12 col-md-6 col-lg-3">
@@ -44,6 +45,7 @@
 						</p>
 						{% endif %}
 					</div>
+					<!-- Buttons -->
 					<div class="text-center">
 						<a class="btn btn-info btn-width mt-3" href="{% url 'product_detail' product.id %}">
 							<span class="text-uppercase font-weight-bold">Product Details</span>
@@ -56,6 +58,7 @@
 			</div>
 		</div>
 	{% empty %}
+		<!-- Wushlist Page "if" empty -->
 		<div class="text-center">
 			<h1 class="font-weight-bold mt-5">You have no items in your wishlist</h1>
 			<a class="btn btn-light btn-lg  mt-5" href="{% url 'products' %}">

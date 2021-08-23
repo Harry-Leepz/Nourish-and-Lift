@@ -10,6 +10,7 @@
 {% endblock %}
 
 {% block content %}
+    <!-- Products Page -->
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
@@ -17,6 +18,7 @@
                 <hr class="w-50 mb-3">
             </div>
         </div>
+        <!-- Sorting Selector -->
         <div class="product-container col-10 offset-1">
             <div class="row mt-1 mb-2">
                 <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
@@ -30,6 +32,7 @@
                         </select>
                     </div>
                 </div>
+                <!-- Search Results -->
                 <div class="col-12 col-md-6 order-md-first">
                     <p class="text-muted mt-3 text-center text-md-left">
                         {% if search_term or current_categories or current_sorting != 'None_None' %}
@@ -39,6 +42,7 @@
                     </p>
                 </div>
             </div>
+            <!-- Products -->
             <div class="row">
                 {% for product in products %}
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
@@ -64,6 +68,7 @@
                                             </a>
                                         </p>
                                         {% endif %}
+                                        <!-- Admin Edit/Delete Buttons -->
                                         {% if request.user.is_superuser %}
                                             <small>
                                                 <a class="text-info font-weight-bold text-uppercase" href="{% url 'edit_product' product.id %}">Edit</a> |
@@ -80,6 +85,7 @@
             </div>
         </div>
     </div>
+    <!-- Back to Top button -->
     <div class="btt-button shadow-sm rounded-0 border">
         <a class="btt-link text-decoration-none d-flex h-100">
             <i class="fas fa-arrow-up text-info mx-auto my-auto"></i>

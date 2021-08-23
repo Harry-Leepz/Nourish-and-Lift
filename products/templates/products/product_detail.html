@@ -10,9 +10,11 @@
 {% endblock %}
 
 {% block content %}
+    <!-- Product Detail Page -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">  
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                <!-- Product Image -->    
                 <div class="image-container mt-5">
                     {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
@@ -25,6 +27,7 @@
                     {% endif %}
                 </div>
             </div>
+            <!-- Product Details -->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="products-detail-container my-5">
                     <h1 class="mb-4 pt-md-5 text-black font-weight-bold"> {{ product.name }}</h1>
@@ -36,12 +39,14 @@
                         </a>
                     </p>
                     {% endif %}
+                    <!-- Admin Edit/Delete Buttons -->
                     {% if request.user.is_superuser %}
                         <small>
                             <a class="text-info font-weight-bold text-uppercase" href="{% url 'edit_product' product.id %}">Edit</a> |
                             <a class="text-danger font-weight-bold text-uppercase" href="{% url 'delete_product' product.id %}">Delete</a>
                         </small>
                     {% endif %}
+                    <!-- Quantity Selection -->
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
@@ -72,6 +77,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- Buttons -->
                             <div class="col-12 text-center">
                                 <input class="btn btn-info btn-width text-uppercase mt-5" type="submit" value="Add to Bag">
                                 <a class="btn btn-info btn-width mt-3" href="{% url 'add_to_wishlist' product.id %}">
