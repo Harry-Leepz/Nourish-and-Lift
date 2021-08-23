@@ -145,7 +145,19 @@ def add_product(request):
     A view to allow admins to add new products
     """
 
-    form = ProductForm
+    if request.method == 'POST':
+        # Check to see if the form being submitted is valid
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Product added successfully')
+        else:
+            messages.error(
+                request,
+                'Error adding product, please check the the form is valid')
+    else:
+        form = ProductForm()
+
     template = 'products/add_product.html'
     context = {
         'form': form

@@ -41,7 +41,7 @@
             </div>
             <div class="row">
                 {% for product in products %}
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
                         <div class="card h-100 border-0">
                             {% if product.image %}
                             <a href="{% url 'product_detail' product.id %}">
@@ -66,7 +66,7 @@
                                         {% endif %}
                                     </div>
                                 </div>
-                                <hr class="w-80 mb-3">
+                                <hr class="w-80 mb-5">
                             </div>
                         </div>
                     </div>

@@ -4,7 +4,6 @@
 <html lang="en">
 
 <head>
-
     {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
@@ -95,14 +94,14 @@
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                            <a class="dropdown-item" href="">Product Management</a>
-                            {% endif %}
-                            <a class="dropdown-item" href="{% url 'profile'%}">My Profile</a>
-                            <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
+                                {% if request.user.is_superuser %}
+                                    <a class="dropdown-item" href="{% url 'add_product' %}">Product Management</a>
+                                {% endif %}
+                                <a class="dropdown-item" href="{% url 'profile'%}">My Profile</a>
+                                <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
                             {% else %}
-                            <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
-                            <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
+                                <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
+                                <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
                             {% endif %}
                         </div>
                     </li>
@@ -176,7 +175,5 @@
         $('.toast').toast('show');
     </script>
     {% endblock %}
-
 </body>
-
 </html>
