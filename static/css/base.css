@@ -127,7 +127,6 @@ hr {
 
 .allauth-form-inner-content input {
     border-color: #000;
-    border-radius: 0;
 }
 
 .allauth-form-inner-content label:not([for='id_remember']) {
@@ -155,7 +154,6 @@ hr {
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
-    border-radius: 0;
 
     /* standard bootstrap btn transitions */
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -168,7 +166,33 @@ hr {
 }
 
 .allauth-form-inner-content a {
-	color: #fafafa; /* text-info */
+	color: #fafafa; 
+}
+
+/* Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
 }
 
 /* -------------------------------- Message Styles */
@@ -311,7 +335,7 @@ textarea.form-control {
     }
 }
 
-/* Remove padding to all all icons to fit on Iphone 5 */
+/* Remove padding on navbar to has all icons fit on 320px screens */
 @media (max-width: 320px) {
     .navbar {
         padding: 0;
