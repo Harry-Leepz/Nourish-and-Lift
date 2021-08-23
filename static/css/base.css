@@ -32,6 +32,10 @@ body {
     color: #fafafa;
 }
 
+.large-container {
+    min-height: 65vh;
+  }
+
 /* -------------------------------- Navbar CSS */
 
 .nav-link {
@@ -71,28 +75,6 @@ hr {
 }
 
 /* -------------------------------- Button Styles */
-.shop-now-button {
-    background: #fafafa;
-    color: #484848;
-    min-width: 260px;
-}
-
-.btn-black {
-    background: #484848;
-    color: #fafafa;
-    border: 1px solid  #484848;
-}
-
-.btn-outline-black:hover,
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #fafafa;
-    color: #212121;
-}
 
 .btn-outline-black {
     color: #212121;

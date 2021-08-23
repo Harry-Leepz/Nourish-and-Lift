@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+	<div class="container header-container">
+		<div class="row">
+			<div class="col"></div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid large-container">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h1 class="hero-font text-uppercase">Ooops! You seemed to have taken a wrong turn</h1>
+                <hr class="w-50 mb-5">
+                <a class="btn btn-light btn-lg  mt-5" href="{% url 'home' %}">
+                    <span class="icon">
+                        <i class="text-info fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase font-weight-bold text-info">Home</span>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
