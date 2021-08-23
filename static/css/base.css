@@ -119,6 +119,10 @@ hr {
     width: 70%;
 }
 
+.edit-btn {
+    border-top-right-radius: 18px;
+}
+
 /* -------------------------------- Form Styles */
 
 /* Allauth form formatting */
@@ -284,6 +288,8 @@ textarea.form-control {
     background: #212121;
     box-shadow:  13px 13px 25px #1b1b1b,
                 -13px -13px 25px #272727;
+    border-width: 3px;
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 /* -------------------------------- Bootstrap Modal */
