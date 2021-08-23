@@ -283,6 +283,29 @@ textarea.form-control {
                 -13px -13px 25px #272727;
 }
 
+/* -------------------------------- Bootstrap Modal */
+
+.modal-header{
+    background-color: #212121;
+}
+
+.modal-body {
+    background-color: #212121;
+}
+
+.modal-footer {
+    background-color: #212121;
+}
+
+.close {
+    float: right;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #fafafa;
+    text-shadow: none;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
