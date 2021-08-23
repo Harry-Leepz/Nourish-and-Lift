@@ -16,7 +16,7 @@
 		<div class="row">
 			<div class="col text-center">
 				<h2 class="text-black hero-font text-uppercase">Shopping Bag</h2>
-				<hr class="w-50 mb-1">
+				<hr class="w-50 mb-5">
 			</div>
 		</div>
 		<!-- Table of items in bag -->
@@ -105,14 +105,14 @@
 							<!-- Buttons -->
 							<tr>
 								<td class="text-right" colspan="5">
-									<a class="btn btn-outline-black rounded-0 mt-5" href="{% url 'products' %}">
+									<a class="btn btn-light mt-5" href="{% url 'products' %}">
 										<span class="icon">
-											<i class="fas fa-chevron-left"></i>
+											<i class="text-info fas fa-chevron-left"></i>
 										</span>
-										<span class="text-uppercase">Keep Shopping</span>
+										<span class="text-info font-weight-bold text-uppercase">Keep Shopping</span>
 									</a>
-									<a class="btn btn-outline-black rounded-0 mt-5" href="{% url 'checkout' %}">
-										<span class="text-uppercase">Secure Checkout</span>
+									<a class="btn btn-info mt-5" href="{% url 'checkout' %}">
+										<span class="text-uppercase font-weight-bold text-light">Secure Checkout</span>
 										<span class="icon">
 											<i class="fas fa-lock"></i>
 										</span>
