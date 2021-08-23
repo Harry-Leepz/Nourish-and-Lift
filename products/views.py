@@ -129,8 +129,8 @@ def edit_review(request, review_id):
     else:
         form = ReviewForm(instance=review)
 
+    messages.info(request, 'You are editing your review')
     template = 'products/product_detail.html'
-
     context = {
         'form': form,
         'review': review,
@@ -149,8 +149,9 @@ def add_product(request):
         # Check to see if the form being submitted is valid
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            product = form.save()
             messages.success(request, 'Product added successfully')
+            return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(
                 request,
@@ -193,3 +194,18 @@ def edit_product(request, product_id):
     }
 
     return render(request, template, context)
+
+
+def delete_product(request, product_id):
+    """
+    A view to delete a product from the store
+    """
+
+    product = get_object_or_404(Product, pk=product_id)
+    # Used to store the products reviews
+    reviews = product.reviews.all()
+    product.delete()
+    # Delete reviews after product is deleted
+    reviews.delete()
+    messages.success(request, 'Product deleted successfully')
+    return redirect(reverse('products'))

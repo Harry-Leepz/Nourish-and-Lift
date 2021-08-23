@@ -94,13 +94,13 @@
             </div>
         </div>
         <!-- Product Reviews-->
-        <div class="row">
+        <div id="reviews" class="row">
             <div class="col-12 col-md-10 col-lg-4 offset-lg-4 mt-5">
                 <h2 class="text-black font-weight-bold mt-5">Reviews</h2>
                 {% if request.user.is_authenticated %}
                     {% if edit %}
                         <!-- Edit Review Form -->
-                        <form method="POST" action="{% url 'edit_review' review.id %}">
+                        <form method="POST" action="{% url 'edit_review' review.id %}#reviews">
                             {% csrf_token %}
                             {{ form|crispy }}
                             <div class="text-right">
@@ -109,7 +109,7 @@
                         </form>
                     {% else %}
                         <!--Review Form -->
-                        <form method="POST" action="{% url 'add_review' product.id %}">
+                        <form method="POST" action="{% url 'add_review' product.id %}#reviews">
                             {% csrf_token %}
                             {{ form|crispy }}
                             <div class="text-right">
@@ -130,7 +130,7 @@
                         <!-- Edit Review Button-->
                         {% if review.user == request.user or request.user.is_superuser %}
                             <div class="card-head text-right">
-                                <a class="btn btn-info" href="{% url 'edit_review' review.id %}">
+                                <a class="btn btn-info" href="{% url 'edit_review' review.id %}#reviews">
                                     Edit Review
                                 </a>
                             </div>
