@@ -36,6 +36,12 @@
                         </a>
                     </p>
                     {% endif %}
+                    {% if request.user.is_superuser %}
+                        <small>
+                            <a class="text-info font-weight-bold text-uppercase" href="{% url 'edit_product' product.id %}">Edit</a> |
+                            <a class="text-danger font-weight-bold text-uppercase" href="{% url 'delete_product' product.id %}">Delete</a>
+                        </small>
+                    {% endif %}
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">

@@ -64,6 +64,12 @@
                                             </a>
                                         </p>
                                         {% endif %}
+                                        {% if request.user.is_superuser %}
+                                            <small>
+                                                <a class="text-info font-weight-bold text-uppercase" href="{% url 'edit_product' product.id %}">Edit</a> |
+                                                <a class="text-danger font-weight-bold text-uppercase" href="{% url 'delete_product' product.id %}">Delete</a>
+                                            </small>
+                                        {% endif %}
                                     </div>
                                 </div>
                                 <hr class="w-80 mb-5">
