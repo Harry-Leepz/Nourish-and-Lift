@@ -1,0 +1,1 @@
+web: gunicorn nourish_and_lift.wsgi:application
