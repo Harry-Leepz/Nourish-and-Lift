@@ -17,9 +17,9 @@
     <!-- User Profile Page -->
     <div class="container">
         <div class="row">
-            <div class="col text-center">
-                <h2 class="font-weight-bold mb-4">My Profile</h2>
-                <hr>
+            <div class="col text-center mt-3">
+                <h1 class="hero-font text-uppercase">Your Profile</h1>
+                <hr class="w-50 mb-5">
             </div>
         </div>
         <div class="row">
@@ -31,7 +31,7 @@
                 <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <button class="btn btn-black rounded-0 text-uppercase float-right">Update Information</button>
+                    <button class="btn btn-info text-uppercase float-right">Update Information</button>
                 </form>
             </div>
             <!-- User Order History -->
@@ -76,7 +76,7 @@
                 </div>
             </div>
         </div>
-        {{ profile }}
+    </div>
 {% endblock %}
 
 {% block postloadjs %}
