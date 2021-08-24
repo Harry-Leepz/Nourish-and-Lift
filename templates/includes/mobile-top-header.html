@@ -29,14 +29,6 @@
       </form>
     </div>
   </li>
-  <!-- Wishlist Icon -->
-  <li class="list-inline-item">
-    <a class="nav-link text-black d-block d-lg-none" href="">
-      <div class="text-center">
-        <div><i class="fas fa-heart"></i></div>
-      </div>
-    </a>
-  </li>
   <!-- My Account Icon -->
   <li class="list-inline-item dropdown">
     <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown"
@@ -50,13 +42,21 @@
         {% if request.user.is_superuser %}
           <a href="{% url 'add_product' %}" class="dropdown-item font-weight-bold">Product Management</a>
         {% endif %}
-        <a href="" class="dropdown-item">My Profile</a>
+        <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
         <a href="{% url 'account_logout' %}" class="dropdown-item font-weight-bold">Logout</a>
       {% else %}
         <a href="{% url 'account_signup' %}" class="dropdown-item font-weight-bold">Register</a>
         <a href="{% url 'account_login' %}" class="dropdown-item font-weight-bold">Login</a>
       {% endif %}
     </div>
+  </li>
+  <!-- Wishlist Icon -->
+  <li class="list-inline-item">
+    <a class="nav-link text-black d-block d-lg-none" href="">
+      <div class="text-center">
+        <div><i class="fas fa-heart"></i></div>
+      </div>
+    </a>
   </li>
   <!-- Shopping Bag Icon -->
   <li class="list-inline-item">

@@ -381,3 +381,10 @@ textarea.form-control {
         padding: 0;
     }
 }
+
+/* Keep user account dropdown text within the screen*/
+@media (max-width: 768px) {
+    .dropdown-menu {
+        font-size: 0.7rem;
+    }
+}
