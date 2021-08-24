@@ -116,13 +116,13 @@
                     </fieldset>
                     <!-- Checkout Form Submission -->
                     <div class="submit-button text-right mt-5 mb-2">                    
-						<a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded-0">
+						<a href="{% url 'view_bag' %}" class="btn btn-light">
 							<span class="icon">
-								<i class="fas fa-chevron-left"></i>
+								<i class="text-info fas fa-chevron-left"></i>
 							</span>
-							<span class="font-weight-bold">Adjust Bag</span>
+							<span class="font-weight-bold text-info">Adjust Bag</span>
 						</a>
-						<button id="submit-button" class="btn btn-black rounded-0">
+						<button id="submit-button" class="btn btn-info">
 							<span class="font-weight-bold">Complete Order</span>
 							<span class="icon">
 								<i class="fas fa-lock"></i>
@@ -141,11 +141,11 @@
     </div>
     <!-- Loading Overlay. Spinner is used to cover the template which payments are processed.-->
     <div id="loading-overlay">
-        <h1 class="text-light logo-font loading-spinner">
+        <div class="text-light logo-font loading-spinner">
             <span class="icon">
                 <i class="fas fa-3x fa-sync-alt fa-spin"></i>
             </span>
-        </h1>
+        </div>
     </div>
 {% endblock %}
 

@@ -80,12 +80,14 @@
                             <!-- Buttons -->
                             <div class="col-12 text-center">
                                 <input class="btn btn-info btn-width text-uppercase mt-5" type="submit" value="Add to Bag">
-                                <a class="btn btn-info btn-width mt-3" href="{% url 'add_to_wishlist' product.id %}">
-                                    <span class="text-uppercase">Add to wishlist</span>
-                                    <span class="icon">
-                                        <i class="fas fa-chevron-right"></i>
-                                    </span> 
-                                </a>
+                                {% if request.user.is_authenticated %}
+                                    <a class="btn btn-info btn-width mt-3" href="{% url 'add_to_wishlist' product.id %}">
+                                        <span class="text-uppercase">Add to wishlist</span>
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </span> 
+                                    </a>
+                                {% endif %}
                                 <a class="btn btn-light btn-width mt-3" href="{% url 'products' %}">
                                     <span class="icon">
                                         <i class="text-info fas fa-chevron-left"></i>
