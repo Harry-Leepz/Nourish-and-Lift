@@ -333,6 +333,24 @@ textarea.form-control {
     border-top: 1px solid #17a2b8;
 }
 
+/* -------------------------------- Home Page CSS */
+
+/*  CSS Style are havily based on this tutorial by CodeIT,
+    https://www.youtube.com/watch?v=h7Hloe6tQkw */
+
+.content {
+	color: #fafafa;
+	text-align: center;
+	transform: translateY(32px);
+	opacity: 0;
+	transition: .8s ease-out;
+}
+
+.content.faded-in {
+	transform: translateY(0);
+	opacity: 1;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

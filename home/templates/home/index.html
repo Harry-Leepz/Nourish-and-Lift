@@ -11,11 +11,64 @@
 
 {% block content %}
 	<div class="container-fluid">
-		<div class="row">
-            <div class="col text-center mt-3">
-                <h1 class="hero-font text-uppercase">Nourish and Lift</h1>
+		<div class="row justify-content-center">
+			<div class="col-12 col-md-7 col-lg-6 text-center">    
+				<h1 class="font-weight-bold text-uppercase pt-5">Nourish and Lift</h1>
                 <hr class="w-50 mb-3">
+				<p class="content lead mt-5">
+					Welcome to Nourish and Lift. A project made for people who may not excercise but want to start.
+					Have you ever walked into a gym and felt out of place or overwhlemed with everything going on.
+					We understand your pain, we have been through the same experience.
+				</p>
+				<p class="content lead mt-5">
+					Nourish and Lift is our new online store that sells beginner excercise equipment to help you to 
+					get started metting your fitness goals. Feel free to browse our range and if you have purchased, why not leave a review on the product.
+					Your review may be the tipping point to help somebody else to start excercising.
+				</p>
             </div>
-        </div>
-	</div>
+		</div>
+		<div class="row mt-5 justify-content-center">
+			<div class="col-12 col-md-7 col-lg-4 text-center">    
+				<h1 class="font-weight-bold text-uppercase pt-5">Discover Opti</h1>
+                <hr class="w-50 mb-3">
+				<p class="content lead mt-5">
+					Our range of Opti fitness equipment has everything you need to complement 
+					your workout routine whether at home, in the park or at the gym. We're here to help you move more, 
+					feel fitter and feel your absolute best!
+				</p>
+				<p class="content lead mt-5">
+					From dumbbell and weight sets to kettlebells and body weights, Opti have all you need for building and toning muscle.
+				</p>
+				<a class="btn btn-lg w-50 btn-info text-light font-weight-bold text-uppercase mt-5" href="{% url 'products' %}">
+					Shop Now
+				</a>
+            </div>
+			<div class="col-12 col-md-7 col-lg-4">    
+				<div class="image-container mt-5">						
+					<img class="card-img-top img-fluid" src="{{ MEDIA_URL }}opti-treeset.png" alt="Opti Dumbbell Set">
+				</div>
+			</div>
+		</div>
+	</div>				
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+		const fadeElements = document.querySelectorAll('.content');
+
+	// Fade .content element in
+		scrollAnim = () => {
+			let windowHt = window.innerHeight;
+			fadeElements.forEach(element => {
+				let elementPos = element.getBoundingClientRect().top;
+				if (elementPos <= windowHt / 1.3 ) {
+					element.classList.add('faded-in');
+				}
+			});
+		}
+		document.addEventListener("DOMContentLoaded", scrollAnim);
+
+		window.addEventListener('scroll', scrollAnim);
+    </script>
 {% endblock %}
