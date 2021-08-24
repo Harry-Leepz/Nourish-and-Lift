@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 html {
     height: 100%;
 }
@@ -53,6 +60,8 @@ body {
 
 /* -------------------------------- Project CSS */
 .hero-image {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url('/media/homepage-heroimage.jpg') no-repeat center center fixed;
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/media/homepage-heroimage.jpg') no-repeat center center fixed;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/media/homepage-heroimage.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
@@ -63,6 +72,8 @@ hr {
 }
 
 .main-logo-link {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -72,9 +83,15 @@ hr {
 
 /* from Bulma */
 .icon {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
 }
@@ -137,6 +154,22 @@ hr {
     display: none;
 }
 
+.allauth-form-inner-content input::-webkit-input-placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content input::-moz-placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content input:-ms-input-placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content input::-ms-input-placeholder {
+    color: #aab7c4;
+}
+
 .allauth-form-inner-content input::placeholder {
     color: #aab7c4;
 }
@@ -161,7 +194,11 @@ hr {
     border-radius: .25rem !important;
 
     /* standard bootstrap btn transitions */
+    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    -o-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
@@ -196,7 +233,6 @@ hr {
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #dc3545;
     border-color: #dc3545;
 }
 
@@ -214,55 +250,6 @@ hr {
 
 .custom-toast {
     overflow: visible;
-}
-
-.toast-capper {
-    height: 2px;
-}
-
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
-.arrow-up {
-    width: 0; 
-    height: 0; 
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
-    border-bottom: 10px solid black;
-    position: absolute;
-    top: -10px;
-    right: 36px;
-}
-
-/* Convenience classes - colors copied from Bootstrap */
-.arrow-primary {
-    border-bottom-color: #007bff !important;
-}
-
-.arrow-secondary {
-    border-bottom-color: #6c757d !important;
-}
-
-.arrow-success {
-    border-bottom-color: #28a745 !important;
-}
-
-.arrow-danger {
-    border-bottom-color: #dc3545 !important;
-}
-
-.arrow-warning {
-    border-bottom-color: #ffc107 !important;
-}
-
-.arrow-info {
-    border-bottom-color: #17a2b8 !important;
-}
-
-.arrow-light {
-    border-bottom-color: #f8f9fa !important;
-}
-
-.arrow-dark {
-    border-bottom-color: #343a40 !important;
 }
 
 .bag-notification-wrapper {
@@ -284,7 +271,9 @@ textarea.form-control {
 .review-container {
     border-radius: 22px;
     background: #212121;
-    box-shadow:  13px 13px 25px #1b1b1b,
+    -webkit-box-shadow:  13px 13px 25px #1b1b1b,
+                -13px -13px 25px #272727;
+            box-shadow:  13px 13px 25px #1b1b1b,
                 -13px -13px 25px #272727;
     border-width: 3px;
     border-color: rgba(255, 255, 255, 0.5);
@@ -341,13 +330,19 @@ textarea.form-control {
 .content {
 	color: #fafafa;
 	text-align: center;
-	transform: translateY(32px);
+	-webkit-transform: translateY(32px);
+	    -ms-transform: translateY(32px);
+	        transform: translateY(32px);
 	opacity: 0;
+	-webkit-transition: .8s ease-out;
+	-o-transition: .8s ease-out;
 	transition: .8s ease-out;
 }
 
 .content.faded-in {
-	transform: translateY(0);
+	-webkit-transform: translateY(0);
+	    -ms-transform: translateY(0);
+	        transform: translateY(0);
 	opacity: 1;
 }
 
