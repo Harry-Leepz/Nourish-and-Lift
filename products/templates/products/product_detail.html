@@ -41,12 +41,10 @@
                     {% endif %}
                     <!-- Admin Edit/Delete Buttons -->
                     {% if request.user.is_superuser %}
-                        <small>
-                            <a class="text-info font-weight-bold text-uppercase" href="{% url 'edit_product' product.id %}">Edit</a> |
-                            <a type="button" class="text-danger font-weight-bold text-uppercase" data-toggle="modal" data-target="#exampleModal">
-                                Delete
-                            </a>
-                        </small>
+                        <a class="btn btn-info" href="{% url 'edit_product' product.id %}">Edit</a>
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                            Delete
+                        </button>
                     {% endif %}
                     <!-- Quantity Selection -->
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
@@ -164,7 +162,7 @@
         </div> 
     </div>
     <!-- Delete Product Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModal" aria-hidden="true">
         <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
