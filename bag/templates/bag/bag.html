@@ -67,7 +67,6 @@
                                     <th scope="col">Subtotal</th>
                                 </tr>
                             </thead>
-							<!-- Shopping Bag Items -->
                             {% for item in bag_items %}
                                 <tr>
                                     <td class="p-3 w-25">
@@ -85,7 +84,7 @@
                                     <td class="py-3">
                                         <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                                     </td>
-                                </tr>
+                                </tr> 
                             {% endfor %}
 							<!-- Shopping Bag Total -->
                             <tr>
@@ -122,7 +121,7 @@
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
 
-<script type="text/javascript">
+<script>
 	//Update product quantity on update click
 	$('.update-link').click(function(e) {
 		var form = $(this).prev('.update-form');
