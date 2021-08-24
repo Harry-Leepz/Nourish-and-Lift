@@ -79,6 +79,11 @@ hr {
     width: 1.5rem;
 }
 
+.border-custom {
+    border: 1px solid #fafafa;
+    border-radius: .25rem;
+}
+
 /* -------------------------------- Button Styles */
 
 .btn-outline-black {

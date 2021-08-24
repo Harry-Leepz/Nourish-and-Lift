@@ -1,6 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseRedirect
+
 from django.contrib import messages
 
 from products.models import Product
@@ -39,7 +39,7 @@ def add_to_wishlist(request, product_id):
     wishlist.products.add(product)
     messages.info(request, "A new product was added to your wishlist")
 
-    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+    return redirect(request.META.get('HTTP_REFERER'))
 
 
 @login_required
@@ -55,4 +55,4 @@ def remove_from_wishlist(request, product_id):
     wishlist.products.remove(product)
     messages.info(request, "A product was removed from your wishlist")
 
-    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+    return redirect(request.META.get('HTTP_REFERER'))

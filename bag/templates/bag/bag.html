@@ -103,13 +103,15 @@
                     </div>
                 {% else %}
 					<!-- Shopping Bag Empty -->
-                    <p class="lead mb-5">Your bag is empty.</p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Keep Shopping</span>
-                    </a>
+                    <div class="text-center mt-3">
+                        <h3 class="hero-font text-uppercase">Your bag is empty.</h3>
+                        <a class="btn btn-light btn-lg  mt-5" href="{% url 'products' %}">
+                            <span class="icon">
+                                <i class="text-info fas fa-chevron-left"></i>
+                            </span>
+                            <span class="text-uppercase font-weight-bold text-info">Keep Shopping</span>
+                        </a>
+                    </div>
                 {% endif %}
             </div>
         </div>
