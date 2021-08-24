@@ -34,7 +34,12 @@ body {
 
 .large-container {
     min-height: 65vh;
-  }
+}
+
+/* Overide Bootstrap text primary class on search results*/
+.text-primary {
+    color: #17a2b8 !important;
+}
 
 /* -------------------------------- Navbar CSS */
 
@@ -143,6 +148,7 @@ hr {
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
+    border-radius: .25rem !important;
 
     /* standard bootstrap btn transitions */
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
