@@ -110,6 +110,11 @@ hr {
     border-top-right-radius: 18px;
 }
 
+.btt-border {
+    border: 1px solid #dee2e6!important;
+    border-radius: 50%;
+}
+
 /* -------------------------------- Form Styles */
 
 /* Allauth form formatting */
