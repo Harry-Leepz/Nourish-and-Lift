@@ -1,6 +1,17 @@
 # **Nourish and Lift**
 
 ## **Introduction**
+Welcome to Nourish and Lift.
+
+Nourish and Lift is my fourth and final project, part of the Code Institute, Full Stack Web Developer Course.
+
+The purpose of this project was a build a full-stack site based around a business logic used to control a centrally-owned dataset. The technologies used for this project are HTML, CSS, JavaScript, Python, and Django. Stripe handles online test payments and Postgres as a relational database.
+
+Nourish and Lift is a fictional brand, purchases on this project are accepted via Stripes test card details. For further information on which card number you should use, please refer to Stripe's official documentation.
+
+[Stripe Test Integration](https://stripe.com/docs/testing)
+
+This project is for educational purposes only, No commercial revenue is generated from this project.
 
 ---
 
