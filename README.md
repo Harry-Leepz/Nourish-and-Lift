@@ -189,6 +189,21 @@ I made some significant changes from my original wireframes. Some changes were m
 
 ## **The Surface Plane**
 
+### **Features**
+
+*Features present across the project,*
+
+**Navigation Bar**
+- Navbar is implemented on every page and is fully responsive across all resolutions.
+- Users are able to freely navigate across the site freely.
+- Users shopping have the cost of the current shopping basket display on large screen sizes.
+![Project Navigation Bar](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/images/navbar.png "Image of the navigation bar")
+
+**Introduction**
+- Home page features an introductions to notify users to welcome them and explain the purpose of the site.
+![Project Introduction](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/images/introduction.png "Image of the Introduction")
+
+
 ---
 
 ## **Technologies Used**
