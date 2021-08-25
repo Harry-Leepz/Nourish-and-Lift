@@ -8,7 +8,7 @@ Welcome to Nourish and Lift.
 
 Nourish and Lift is my fourth and final project, part of the Code Institute, Full Stack Web Developer Course.
 
-The purpose of this project was a build a full-stack site based around a business logic used to control a centrally-owned dataset. The technologies used for this project are HTML, CSS, JavaScript, Python, and Django. Stripe handles online test payments and Postgres as a relational database.
+The purpose of this project was a build a full-stack site based around a business logic used to control a centrally-owned dataset. The technologies used for this project are HTML, CSS, JavaScript, Python, and Django. Stripe handles online test payments and Heroku Postgres as a relational database.
 
 Nourish and Lift is a fictional brand, purchases on this project are accepted via Stripes test card details. For further information on which card number you should use, please refer to Stripe's official documentation.
 
@@ -121,6 +121,10 @@ Google Fonts - Quicksand
 My images over the course of the project did manage to evolve and develop thanks to Sonia Akhtar Hussain.
 My defualy images for the product had white background, and Sonia used her skills to really base the products stand out with a custom background.
 Please visit the credits section for a link to Sonia's profile.
+
+#### **Database Design**
+
+SQLite was used during development and then Heroku Postgres in production.
 
 ---
 
