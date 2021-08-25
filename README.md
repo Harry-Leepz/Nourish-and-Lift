@@ -154,6 +154,37 @@ SQLite was used during development and then Heroku Postgres in production.
 
 ## **The Skeleton Plane**
 
+I made some significant changes from my original wireframes. Some changes were more based on removing features I had planned to implement, and other changes were made after receiving feedback.
+
+[Navbar Wireframes](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/wireframes/navbar-wireframes.pdf)
+
+- I decided to change my navbar signifcantly due to originally planning to have more pages than I finished with.
+- The search input field stayed in the middle, but on mobile and tablet resolutions the search bar is instead held within a font awesome magnifying icon. User can still acess the search bar on mobile by clicking the icon to reveal the bar.
+- The left sid has had to most changes due to not having additional pages that were planned. Instead only a Home link is there to give users a way toget back to the home page. 
+
+[Shopping Bag Wireframes](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/wireframes/checkout-page-wireframes.pdf)
+
+- The shopping bag page has it's layout changed mainly on mobile, whereas on desktop everything is more condensed so not to take up the full width of the browser.
+- On smaller resolutions fitting everything within a 320px resolution became incredibly problematic. Everything felt squashed and condensed.
+- To remedy the smaller resolutions, items within the bag now show u vertically, with the image first, name, price, quantity input and total for the product in that order. This change was well recieved from the feedback I got, and all in all provides a better user experience.
+
+[All Products Wireframes](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/wireframes/shop-page-wireframes.pdf)
+
+- I changed the amount of products being shown horizontally from 4 to 3. This change was the leverage how good I felt the product images were.
+- I removed the deatils and add to bag buttons, the image now acts as a link to the products detials page.
+
+[Product Details Wireframes](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/wireframes/products-detail-wireframes.pdf)
+
+- Small change on this page was to move the product description to below the product. I felt as though the amount of information on the right side of the page was causing a bad user experience. Moving the description below also allowed me to increase the font size to make it easier to read.
+
+[Account Page Wireframes](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/wireframes/account-page-wireframes.pdf)
+
+[Checkout Success Wireframes](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/wireframes/checkout-success-wireframes.pdf)
+
+[Register Wireframes](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/wireframes/register-page-wireframes.pdf)
+
+[Log In Wireframes](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/wireframes/login-page-wireframes.pdf)
+
 ---
 
 ## **The Surface Plane**
