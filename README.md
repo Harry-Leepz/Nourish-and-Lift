@@ -70,8 +70,28 @@ My user stories were obtained by doing research into other stores and seeing how
 
 ## **The Scope Plane**
 
+The features that I had thought about before designing the project and my deadline was not achievable. I opted for a phased release approach. 
 
+I was able to ascertain which features were more important and should be working on my initial deployment, and which features I could add later.
 
+My plan for a phased deployment, 
+
+**Phase 1**
+- A project that would satisfy my user stories.
+    - Home Page with a introduction 
+    - Navbar allowing user to navigate to different pages
+    - Products page allowing users to view all products. 
+    - A product detail page.
+    - E-commerce functionality allowing user to make purchases.
+**Phase 2**
+- Building upon the Phase 1 project with additional features.
+    - A funtional blog app that allows admins to to post blogs.
+    - Allow users the filter blog types.
+    - Allow users to post comments on the blogs.
+**Phase 3**
+- My final planned phase would focus on user feedback
+    - Project feedback, to see if things could be improved.
+    
 ---
 
 ## **The Structure Plane**
