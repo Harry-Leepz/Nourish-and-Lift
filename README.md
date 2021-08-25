@@ -91,10 +91,36 @@ My plan for a phased deployment,
 **Phase 3**
 - My final planned phase would focus on user feedback
     - Project feedback, to see if things could be improved.
-    
+
 ---
 
 ## **The Structure Plane**
+
+#### **Colors**
+![Color pallete used through the project](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/images/color-pallete.png "Color Pallete")
+
+#212121
+- I used a dark grey for the body color, I have always preferred darkmode and thought it helped the lighter colors stand out, creating a better contrast.
+
+#17A2B8
+- The Bootstrap info class colors was used most on horizontal rules, buttons and anchortag elements. 
+
+#FAFAFA
+- Offwhite color was used for the text throughout the project. I felt it's softer of the eyes over default white, and compliments the blue and dark grey really well.
+
+#484848
+- A slightly lighter shade of grey was mainly used on the Bootstrap toasts as a background. I choose this, so it's easier for the user to view the toasts and descern the difference between elements overlapping.
+
+#### **Fonts**
+
+Google Fonts - Quicksand
+- I chose Quicksand as my font throughout the project. The font is easily readible and simple. I opted to have a single font in this project simply because the project as whole isn't text heavy, and chose to instead to use a heavier font weight for headings.
+
+#### **Images**
+
+My images over the course of the project did manage to evolve and develop thanks to Sonia Akhtar Hussain.
+My defualy images for the product had white background, and Sonia used her skills to really base the products stand out with a custom background.
+Please visit the credits section for a link to Sonia's profile.
 
 ---
 
