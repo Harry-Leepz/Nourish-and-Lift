@@ -126,6 +126,30 @@ Please visit the credits section for a link to Sonia's profile.
 
 SQLite was used during development and then Heroku Postgres in production.
 
+[Database Diagram](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/schema/database.pdf)
+
+#### **Key Models**
+
+**UserProfile**
+- The user profile is connected to the User model created by Allauth on registration.
+- The default fields are saved fields by the user to speed up the checkout process by pre-populating shipping details.
+
+**Order**
+- The order model is connected to the User Profile, allows the user to view their previous orders.
+- The order model acts as a container for the orderlineitems. Although is item is stored within the OrderLineItem model, having them connected allows to retrieve the item purchased.
+
+**Product**
+- The product model hold key information for each product. Each product has a unique ID.
+- The product model is connected to the category model, this allows the user to filter products by category.
+
+**ProductReview**
+- Reviews for products can be left for products with this model, having it connect to the Product model via the ID.
+- The review model also is connected to the User model to obtain the user's username. This allows user to see the name of the user on each review. 
+
+**WishList**
+- The wishlist model allows user to save items for quicker access. These items can be removed.
+- This model also acts as a container for the WishListItem model. Just like the Order model, each wishlist is unique to each user but connecting to the user ID.
+
 ---
 
 ## **The Skeleton Plane**
