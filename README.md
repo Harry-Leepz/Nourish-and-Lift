@@ -197,12 +197,57 @@ I made some significant changes from my original wireframes. Some changes were m
 - Navbar is implemented on every page and is fully responsive across all resolutions.
 - Users are able to freely navigate across the site freely.
 - Users shopping have the cost of the current shopping basket display on large screen sizes.
+
 ![Project Navigation Bar](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/images/navbar.png "Image of the navigation bar")
 
 **Introduction**
 - Home page features an introductions to notify users to welcome them and explain the purpose of the site.
+
 ![Project Introduction](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/images/introduction.png "Image of the Introduction")
 
+**Store Page**
+- Store page offer products on large resolutions in a row of three. Image are lare to attract users attention, and clicking the image will redirect the user to the product detail page.
+
+![Products](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/images/shop.png "Image of the products in the store")
+
+**Search Functionality**
+- Users can take advantage of the the search function within the navigation bar to search for products or descriptions.
+- Search results are show in a simple format with a link to redirect to the general store page.
+
+![Search Results](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/images/search.png "Image of the search results")
+
+**Reviews**
+- Users can choose to view the reviews left by users for a specific product.
+- Logged in users are able to post a review, whereas users not logged in are show a small message to log in to leave a product review.
+- User choosing the leave a review can choose to pick a title, give a start rating out of five, and write a review.
+
+![Reviews](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/images/reviews.png "Image of the reviews section")
+
+**Toasts**
+- Almost all actions provide feedback to the user via the bootstrap toasts writted to provide used feedback.
+- Users shopping can view the current items within the bag and total cost. How much they need to spend to get free delivery.
+- At the bottom of the toast is a link to the checkout page.
+
+![Toasts](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/images/toasts.png "Image of the toasts.")
+
+**Shopping Bag**
+- The shopping bag page is fully responsive, showing users a picture of the item, name, price per unit, and total price.
+- Users can also chohose to increase/decrease the quantity of items in their bag, click the update button to have the prices update.
+- user can click the remove link and have all the item within the bag removed, regardless of quantity.
+- At the bottom of the page user can find the cost of the bag, cost of delivery, the grand total and how much they must spend to be eligible for free delivery.
+
+![Shopping Bag Page](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/images/shopping-bag.png "Image of the the shopping bag page with 2 items")
+
+**Checkout Overlay**
+- Users who checkout will see a simple overlay with a spinning icon while the payment is processed.
+
+![Loading Overlay](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/images/overlay.png "Image of the the loading overlay")
+
+**Social Media Links**
+- Every page throughout the project has a footer with social media links. 
+- Clicking the social media like redirect the user to the social media page in a new tab, so not to cause disruption to the user experience.
+
+![Social Media Icons](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/images/social.png "Image of the the social media icons in the footer")
 
 ---
 
