@@ -241,7 +241,8 @@ hr {
 }
 
 .toast {
-    background-color: #424242;
+    background-color: #212121;
+    border: 1px solid #17a2b8;
 }
 
 .custom-toast {

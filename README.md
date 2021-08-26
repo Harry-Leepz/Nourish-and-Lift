@@ -314,6 +314,8 @@ I made some significant changes from my original wireframes. Some changes were m
 
 ## **Testing**
 
+Link to the Testing Document
+- [TESTING.md](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/TESTING.md)
 ---
 
 ## **Deployment**
