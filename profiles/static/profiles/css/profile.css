@@ -29,3 +29,7 @@
 a {
     color: #9e9e9e;
 }
+
+a:hover {
+    color: #17a2b8
+}
