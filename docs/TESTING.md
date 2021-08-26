@@ -69,7 +69,6 @@
 - Shopping bag link in navbar shows correct value of the current bag session.
 - Quantity buttons are working correctly preventing the user from exceeding 99 and going below 1.
 - Correct products are shown in the shopping bag.
-- Logging out with items in the bag correctly empties shopping.
 - Adding items to the bag, and logging in after correctly retains the current bag.
 - Correct totals are shown.
 - Free deleivery threshhold correctly updates, shows correct values.
@@ -79,4 +78,27 @@
 - Form correctly responds to invalid inputs.
 - Redirects to the checkout success page correctly.
 - Stripe correctly showing 200 status webhooks for orders.
+
+**Search Bar**
+- Showing correct search for words searched.
+- Adding a new product and search by it's name correctly shows the product.
+- User feedback is accurate.
+
+---
+
+### **Automated Testing**
+
+
+[W3C HTML Validator](https://validator.w3.org/)
+- 0 Errors
+- 0 Warnings
+
+[W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+- 0 Errors
+- 28 Warnings
+    - These warnings are in relation to a unknown vendor extentions that are added by CSS Autoprefixer for cross browser support.
+
+[JSHint JavaScript Validator](https://jshint.com/)
+- 0 Errors
+- 0 Warnings 
 
