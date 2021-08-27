@@ -523,8 +523,29 @@ pip3 freeze > requirements.txt
 
 ## **Aknowledgements**
 
-Chris Zielinski
-- [LinkedIn Profile](https://www.linkedin.com/in/ckz8780/)
+**Chris Zielinski**
+- [LinkedIn](https://www.linkedin.com/in/ckz8780/)
     - The creator of the Boutique Ado project. Also Help create the models and views for the wishlist app.
     - He has been a huge help and support throughotu this project, not only to me but countless other students. Takes time out of his day to help and respond to messages and has always been extremely courteous and respectful.
+
+**Benjamin Kavanagh**
+- [Github](https://github.com/BAK2K3) | [LinkedIn](https://www.linkedin.com/in/benjaminkavanagh/)
+    - Benjamin played a large role in testing the initial deployed version of this project offering fixes and solutions.
+    - He has always taken time to offer advice and guidance.
+
+**Aaron Sinnott**
+- My mentor from the first time I started my course at Code Institute. 
+- Has always offered incredible advice and support, providing valuable feedback and offered solutions to several Pep8 errors.
+
+**Jane Rinn**
+- [Github](https://github.com/janeyrinn) | [LinkedIn](https://www.linkedin.com/in/jane-rinn/)
+    - A fellow student at Code Institute, but in reality so much more. A friend who has been there for me everytime I struggled.
+    - Tested the project, offering a massive amount of feedback.
+
+**Sonia Akhtar Hussain**
+- [Github](https://github.com/CodeSonia) | [LinkedIn](https://www.linkedin.com/in/sonia-akhtar-hussain/)
+    - Someone who until recently I had the luxry to meeting and got to know.
+    - Sonia re-did the backgrounds for all of my product images and to anyone who views this project, She deserves all the credit for the incredible product images. 
+
+Finally thank you for viewing this project. I hope whoever you are, that you are in good health and doing well. God Bless!
 
