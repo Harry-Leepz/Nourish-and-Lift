@@ -84,6 +84,27 @@
 - Adding a new product and search by it's name correctly shows the product.
 - User feedback is accurate.
 
+**Chrome Dev Tools**
+
+Chrome dev tools was used throughout the development of the project to test responsiveness.
+Responsiveness was tested using Dev Tools to emulate the following devices,
+- Iphone 5
+- Iphone 6/7/8
+- Iphone 6/7/8 Plus
+- Iphone X
+- Ipad
+- Ipad Pro
+
+**Browser Testing**
+
+During development, the testing was mainly done solely using Google Chrome.
+
+In production the site has been tested on the following browsers,
+- Google Chrome
+- Mozilla Firefox
+- Opera
+- Microsoft Edge
+
 ---
 
 ### **Automated Testing**
@@ -119,26 +140,68 @@ The python extention was used to test Python for Pep8 compliance withit's built 
 
 ![Flake 8 Python code errors](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/images/pep8.png "Python code errors")
 
-**Chrome Dev Tools**
 
-Chrome dev tools was used throughout the development of the project to test responsiveness.
-Responsiveness was tested using Dev Tools to emulate the following devices,
-- Iphone 5
-- Iphone 6/7/8
-- Iphone 6/7/8 Plus
-- Iphone X
-- Ipad
-- Ipad Pro
+### **Bugs and Fixes**
 
-**Browser Testing**
 
-During development, the testing was mainly done solely using Google Chrome.
+- Reviews not being centered.
+    - Credit to Benjamin Kavanagh for finding this issue.
+    - Added `text-center mt-5` to the div, to have all the text centered and add margin to the top.
 
-In production the site has been tested on the following browsers,
-- Google Chrome
-- Mozilla Firefox
-- Opera
-- Microsoft Edge
+![Empty reviews message not centered image](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/images/review-fix.png "Empty reviews message not centered image")
 
-**Bugs and Fixes**
+- Button to edit the review was overlapping the container.
+    - Credit to Benjamin Kavanagh for finding this issue and fixing it Chrome Dev Tools.
+    - Fix was impletemented in base.css with the solution Banjamin used in Chrome Dev Tools.
 
+![An image of the review button fix](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/images/review-button-fix.png "Review button fix")
+
+- Missing 404 and 500 error pages.
+    - Credit to Benjamin Kavanagh for finding this issue and offering a solution.
+    - 404.html and 500.html templates were created with a heading and button to redirect the user to the products page.
+
+- Adding a product to the wishlist created an infinite loop, if the user was not signed it. The user would correctly be redirected to the login page, but the backend would carry on attempting to add the product to the wishlist.
+    - I removed the wishlist button for users not logged in, and set it to show only if the user is logged in. This avoid the loop from taking place.
+
+- Wishlist app template rendering. I had significant issues writing the view to render the wishlist template correctly.
+    - Chris Zielinski rewrote the view for the wishlist view, wish was far clearner and functioned correctly.
+
+Original Wishlist view by me,
+```
+@login_required
+def wishlist(request):
+    """
+    A view to render the users wishlist
+    """
+    wishlist_count = WishList.objects.filter(user=request.user).count()
+    if wishlist_count > 0:
+        wishlist = WishList.objects.get(user=request.user)
+        items = WishListItem.objects.filter(wishlist=wishlist.user.id)
+
+        context = {
+            'items': items,
+        }
+    else:
+        context = {}
+    return render(request, 'wishlist/wishlist.html', context=context)
+```
+
+Chris Zielinski Wishlist view solution,
+```
+@login_required
+def wishlist(request):
+    """
+    A view to render the users wishlist
+    """
+    wishlist = None
+    try:
+        wishlist = WishList.objects.get(user=request.user)
+    except WishList.DoesNotExist:
+        pass
+
+    context = {
+        'wishlist': wishlist,
+    }
+
+    return render(request, 'wishlist/wishlist.html', context=context)
+```
