@@ -131,3 +131,14 @@ Responsiveness was tested using Dev Tools to emulate the following devices,
 - Ipad Pro
 
 **Browser Testing**
+
+During development, the testing was mainly done solely using Google Chrome.
+
+In production the site has been tested on the following browsers,
+- Google Chrome
+- Mozilla Firefox
+- Opera
+- Microsoft Edge
+
+**Bugs and Fixes**
+
