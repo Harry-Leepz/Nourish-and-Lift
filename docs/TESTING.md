@@ -84,6 +84,7 @@
 - Adding a new product and search by it's name correctly shows the product.
 - User feedback is accurate.
 
+
 **Chrome Dev Tools**
 
 Chrome dev tools was used throughout the development of the project to test responsiveness.
@@ -121,7 +122,8 @@ In production the site has been tested on the following browsers,
 
 [JSHint JavaScript Validator](https://jshint.com/)
 - 0 Errors
-- 0 Warnings 
+- 1 Undefined variable `stripe`.
+    - This variable is being used.
 
 The python extention was used to test Python for Pep8 compliance withit's built in linting too.
 - Alot of the Python errors were fixed during development.
@@ -205,3 +207,29 @@ def wishlist(request):
 
     return render(request, 'wishlist/wishlist.html', context=context)
 ```
+
+- Footer appearing higher up on pages with less content.
+    - Credit to Jane Rinn for pointing this issue out.
+    - A `large-container` class was created with a `min-height` to push the content down. This was applied to the shopping bag template,
+    wishlist template and allauth templates.
+
+- Unused variable in wishlist app.
+    - Credit to Aaron Sinnot for providing a solution.
+    - My original code for my add_to_wishlist view,
+    ` wishlist, created = WishList.objects.get_or_create(user=request.user)` this was causing a Pep8 error with the `created` variable being unused.
+    - `wishlist, _ = WishList.objects.get_or_create(user=request.user)` Aaron suggested to use an underscore.
+
+### **Un-resolved Bugs**
+
+- Users logged in who have items in their shopping bag, lose the contents of their shopping bag upon logging out.
+
+- Users are able to delete the current number in the quantity input, and can add to bag on the product detail page or update in the shopping bag page.
+    - Users are redirected to a 404 error page when they do this, but the core issue remains unresolved.
+
+- Clicking a drop down option is using the default blue acchor tag color for a split second.
+
+- Successful messages can be difficult to see and understand if item are in the shopping bag. On any success notitifcation, the bag contents are always displayed.
+
+- Filename not showing when adding or editing products. 
+    - I had a duplicate id error in the html validator orignally, and although the id's were different, I had to remove one if to pass validations. Doing so though has caused the above error.
+
