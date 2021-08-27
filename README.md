@@ -1,5 +1,7 @@
 # **Nourish and Lift**
 
+[Live Site](https://nourish-and-lift.herokuapp.com/)
+
 ![Responsive view of Nourish and Lift on all devices](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/images/project-image.png "Nourish and Lift")
 
 
@@ -324,7 +326,7 @@ The master branch of this repository is the most current version and has been us
 
 The Code Institiue student template was used to create this project.
 
-- [Code Institute Full Template](https://github.com/Code-Institute-Org/gitpod-full-template)
+[Code Institute Full Template](https://github.com/Code-Institute-Org/gitpod-full-template)
 
 - Click the *Use This Template* button.
 - Give your repository a name, and description if you wish.
@@ -499,4 +501,30 @@ pip3 freeze > requirements.txt
 
 ## **Credits**
 
-  
+**Product Images / Names / Descriptions**
+- All the content relating to the products all came from the Argos website. Although the images were altered the original images were screen shots taken from items from there.
+- [Argos](https://www.argos.co.uk/list/shop-all-opti-weights?tag=ar:shop:opti:weights-dumbbells-lb)
+    - This project is made solely for educational purposes. There is no financial gain from the project. 
+
+**Code**
+- A large amount of code came from the Code Institute, Boutique Ado Project.
+- [Code Institute, Boutique Ado](https://harry-boutique-ado.herokuapp.com/)
+    - Boutique Ado is a walkthrough project by Code Institute, this project gave students an introduction to Django/AWS S3/Stripe/Heroku Postgres
+    - The core functionality of Nourish and Lift is all taken from the Boutique Ado project.
+
+**Bootstrap**
+- The Bootstrap Library was used through the project. The project used version 4.6.
+- [Bootstrap](https://getbootstrap.com/docs/4.6/components/alerts/)
+    - Toasts/Navigation Bar/Forms/Dropdown Menu/Buttons, the core elements mentioned are all found in the Bootstrap components section and built upon.
+
+**Django Documentation**
+- Django have amazing documentation with a tutorial project and in depth explanations on core components.
+- [Django Documentation ](https://docs.djangoproject.com/en/3.2/)
+
+## **Aknowledgements**
+
+Chris Zielinski
+- [LinkedIn Profile](https://www.linkedin.com/in/ckz8780/)
+    - The creator of the Boutique Ado project. Also Help create the models and views for the wishlist app.
+    - He has been a huge help and support throughotu this project, not only to me but countless other students. Takes time out of his day to help and respond to messages and has always been extremely courteous and respectful.
+
