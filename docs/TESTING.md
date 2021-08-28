@@ -134,11 +134,11 @@ The python extention was used to test Python for Pep8 compliance withit's built 
     - checkout/__init__.py
 - The errors relating to the variable 'e' not being used,
     - 'e' as a variable here is used to capture any errors from the Stripe webhook handler.
-- There are 2 errors relating to lines being too long in the checkout app,
-    - models.py has 1 line that cannot be shortened without breaking the code
-    - webhooks.py has 1 line that cannot be shortened wihout breaking the code.
 - ./checkout/app.py - 'checkout.signals' imported but unused
     - The import is used to let Django know there a signals module, listening for changes to automatically updating the totals
+- Errors relating to lines being to long.
+    - Most errors were fixed thanks to Aaron Sinnot's aid.
+    - Lines 74 and 75 in webhook_handler.py cannot be shortened without breaking the code. `# noqa` is added to override the error. 
 
 ![Flake 8 Python code errors](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/docs/images/pep8.png "Python code errors")
 
