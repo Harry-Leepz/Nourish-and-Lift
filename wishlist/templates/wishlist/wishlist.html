@@ -10,15 +10,17 @@
 {% endblock %}
 
 {% block content %}
-	<!-- User Wishlist Page -->
-	<div class="text-center mt-3">
-		<h1 class="hero-font text-uppercase">Your Wish List</h1>
-		<hr class="w-50 mb-3">
-	</div>
-	<!-- User WishList Items -->
+	<!-- User WishList Page -->
 	<div class="container-fluid large-container">
-		<div class="row justify-content-center">
-			{% for product in wishlist.products.all %}
+		<div class="row">
+            <div class="col text-center mt-3">
+                <h1 class="font-weight-bold text-uppercase">Your Wish List</h1>
+                <hr class="w-50 mb-5">
+            </div>
+        </div>
+		<!-- User WishList Items -->
+		{% for product in wishlist.products.all %}
+			<div class="row justify-content-center">
 				<div class="col-12 col-md-6 col-lg-3">
 					<div class="image-container mt-5">
 						{% if product.image %}
@@ -55,7 +57,7 @@
 						</a>
 					</div>
 				</div>
-			{% empty %}
+		{% empty %}
 				<!-- Wishlist Page "if" empty -->
 				<div class="text-center mt-3">
 					<h3 class="font-weight-bold text-uppercase">You have no items in your wishlist</h3>
@@ -66,7 +68,7 @@
 						<span class="text-uppercase font-weight-bold text-info">Keep Shopping</span>
 					</a>
 				</div>
-			{% endfor %}	
-		</div>
+			</div>	
+		{% endfor %}	
 	</div>
 {% endblock %}
