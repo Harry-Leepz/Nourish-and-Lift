@@ -18,57 +18,59 @@
                 <hr class="w-50 mb-5">
             </div>
         </div>
-		<!-- User WishList Items -->
-		{% for product in wishlist.products.all %}
-			<div class="row justify-content-center">
-				<div class="col-12 col-md-6 col-lg-3">
-					<div class="image-container mt-5">
-						{% if product.image %}
-							<a href="{% url 'product_detail' product.id %}">
-								<img class="card-img-top" src="{{ product.image.url }}" alt=" {{ product.name }}">
-							</a>
-						{% else %}
-							<a href="{% url 'product_detail' product.id %}">
-								<img class="card-img-top" src="{{ MEDIA_URL }}noimage.png " alt=" {{ product.name }}">
-							</a>
-						{% endif %}
-					</div>
-				</div>
-				<div class="col-12 col-md-6 col-lg-4">
-					<div class="products-detail-container my-5">
-						<h3 class="mb-4 pt-md-5 text-black font-weight-bold"> {{ product.name }}</h3>
-						<h4 class="text-black lead mb-2 text-left font-weight-bold">£{{ product.price }}</h4>
-						{% if product.category %}
-						<p class="small">
-							<a class="text-muted text-black font-weight-bold"
-								href="{% url 'products' %}?category={{ product.category.name }}">
-								<i class="fas fa-hashtag"></i> {{ product.category.friendly_name }}
-							</a>
-						</p>
-						{% endif %}
-					</div>
-					<!-- Buttons -->
-					<div class="text-center">
-						<a class="btn btn-info btn-width mt-3" href="{% url 'product_detail' product.id %}">
-							<span class="text-uppercase font-weight-bold">Product Details</span>
+	<!-- User WishList Items -->
+	{% for product in wishlist.products.all %}
+		<div class="row justify-content-center">
+			<div class="col-12 col-md-6 col-lg-3">
+				<div class="image-container mt-5">
+					{% if product.image %}
+						<a href="{% url 'product_detail' product.id %}">
+							<img class="card-img-top" src="{{ product.image.url }}" alt=" {{ product.name }}">
 						</a>
-						<a class="btn btn-info btn-width mt-3" href="{% url 'remove_from_wishlist' product.id %}">
-							<span class="text-uppercase font-weight-bold">Remove from wishlist</span>
+					{% else %}
+						<a href="{% url 'product_detail' product.id %}">
+							<img class="card-img-top" src="{{ MEDIA_URL }}noimage.png " alt=" {{ product.name }}">
 						</a>
-					</div>
+					{% endif %}
 				</div>
-		{% empty %}
-				<!-- Wishlist Page "if" empty -->
-				<div class="text-center mt-3">
-					<h3 class="font-weight-bold text-uppercase">You have no items in your wishlist</h3>
-					<a class="btn btn-light btn-lg mt-5" href="{% url 'products' %}">
-						<span class="icon">
-							<i class="text-info fas fa-chevron-left"></i>
-						</span>
-						<span class="text-uppercase font-weight-bold text-info">Keep Shopping</span>
+			</div>
+			<div class="col-12 col-md-6 col-lg-4">
+				<div class="products-detail-container my-5">
+					<h3 class="mb-4 pt-md-5 text-black font-weight-bold"> {{ product.name }}</h3>
+					<h4 class="text-black lead mb-2 text-left font-weight-bold">£{{ product.price }}</h4>
+					{% if product.category %}
+					<p class="small">
+						<a class="text-muted text-black font-weight-bold"
+							href="{% url 'products' %}?category={{ product.category.name }}">
+							<i class="fas fa-hashtag"></i> {{ product.category.friendly_name }}
+						</a>
+					</p>
+					{% endif %}
+				</div>
+				<!-- Buttons -->
+				<div class="text-center">
+					<a class="btn btn-info btn-width mt-3" href="{% url 'product_detail' product.id %}">
+						<span class="text-uppercase font-weight-bold">Product Details</span>
+					</a>
+					<a class="btn btn-info btn-width mt-3" href="{% url 'remove_from_wishlist' product.id %}">
+						<span class="text-uppercase font-weight-bold">Remove from wishlist</span>
 					</a>
 				</div>
-			</div>	
-		{% endfor %}	
+			</div>
+		</div>		
+	{% empty %}
+		<div class="row justify-content-center">
+			<!-- Wishlist Page "if" empty -->
+			<div class="text-center mt-3">
+				<h3 class="font-weight-bold text-uppercase">You have no items in your wishlist</h3>
+				<a class="btn btn-light btn-lg mt-5" href="{% url 'products' %}">
+					<span class="icon">
+						<i class="text-info fas fa-chevron-left"></i>
+					</span>
+					<span class="text-uppercase font-weight-bold text-info">Keep Shopping</span>
+				</a>
+			</div>
+		</div>
+	{% endfor %}	
 	</div>
 {% endblock %}
